@@ -1,0 +1,33 @@
+<div class="hero-banner">
+    <div class="hero-banner__image">
+        <img src="@@image" alt="">
+    </div>
+    <div class="hero-banner__overlay"></div>
+    <div class="hero-banner__in">
+        <div class="hero-banner__mark">Главный материал</div>
+        @@if (name === 'test' && nav === true) {
+            @@include('test.html')
+        }
+        <a href="#" class="hero-banner__name">@@name</a>
+        <div class="hero-banner__info">
+            <div class="hero-banner__info_item">
+                <div class="icon">
+                    <img src="/img/up.svg" width="100%" alt="">
+                </div>
+                <div class="text">Экономика</div>
+            </div>
+            <div class="hero-banner__info_item">
+                <div class="icon">
+                    <img src="/img/up.svg" width="100%" alt="">
+                </div>
+                <div class="text">Экономика</div>
+            </div>
+            <div class="hero-banner__info_item">
+                <div class="icon">
+                    <img src="/img/up.svg" width="100%" alt="">
+                </div>
+                <div class="text">Экономика</div>
+            </div>
+        </div>
+    </div>
+</div>

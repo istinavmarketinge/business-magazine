@@ -1,0 +1,51 @@
+<div class="news-list">
+    <div class="news-list__in">
+        <div class="news-list__top">
+            <div class="news-list__title global__block-title">Новости</div>
+            <a href="#" class="all__link">
+                <div class="text">Больше новостей</div>
+                <div class="arrow">
+                    <img src="/img/all_arrow.svg" width="100%" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="news-list__bottom">
+            <div class="news-list__items">
+                @@for ($i = 0; $i < 3; $i++) {
+                    <article class="news-list__item">
+                        <a href="#" class="news-list__item_link">
+                            <div class="news-list__item_top">
+                                <div class="news-list__item_image">
+                                    <img src="http://placehold.it/335x189" width="100%" alt="">
+                                </div>
+                                <h3 class="news-list__item_title">Минфин купит акции Дом.РФ за счет средств ФНБ</h3>
+                                <p class="news-list__item_text">Минфин России в текущем году приобретет акции Дом.РФ на 87 миллиардов рублей за счет средств ФНБ. Соответствующее распоряжение подписал председатель правительства РФ...</p>
+                            </div>
+
+                            <div class="news-list__info">
+                                <div class="news-list__info_item">
+                                    <div class="icon">
+                                        <img src="/img/up.svg" width="100%" alt="">
+                                    </div>
+                                    <div class="text">Экономика</div>
+                                </div>
+                                <div class="news-list__info_item">
+                                    <div class="icon">
+                                        <img src="/img/up.svg" width="100%" alt="">
+                                    </div>
+                                    <div class="text">20.05.2023</div>
+                                </div>
+                                <div class="news-list__info_item">
+                                    <div class="icon">
+                                        <img src="/img/up.svg" width="100%" alt="">
+                                    </div>
+                                    <div class="text">18:48</div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                }
+            </div>
+        </div>
+    </div>
+</div>

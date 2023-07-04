@@ -1,0 +1,112 @@
+.header {
+    background: #180D2F;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &__in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        display: block;
+        width: 40px;
+        height: 58px;
+    }
+    &__left,
+    &__region {
+        display: flex;
+        align-items: center;
+    }
+    &__region {
+        margin-left: 40px;
+    }
+    &__region-left {
+        color: #6D6C6C;
+        font-size: 16px;
+        font-family: Unbounded;
+        line-height: 110%;
+        letter-spacing: 0.64px;
+    }
+    &__region-dropdown {
+        margin-left: 10px;
+        .active {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            &:after {
+                content: "";
+                display: block;
+                margin-left: 10px;
+                width: 9px;
+                height: 18px;
+                background: url('../img/arrow.svg') 50% 50% / cover no-repeat;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        > li {
+            &:not(:last-child) {
+                margin-right: 82px;
+            }
+        }
+        > li > a {
+            color: #fff;
+            font-size: 16px;
+            line-height: 110%;
+            letter-spacing: 0.64px;
+            text-decoration: none;
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #6D6C6C;
+        button {
+            padding: 0;
+            margin: 0 20px 0 0;
+            background: transparent;
+            border: none;
+            font-size: 0;
+            cursor: pointer;
+            outline: none;
+        }
+        input {
+            padding: 0;
+            margin: 0;
+            width: 161px;
+            background: transparent;
+            border: none;
+            outline: none;
+            &, &::placeholder {
+                font-size: 16px;
+                line-height: 110%;
+                letter-spacing: 0.64px;
+                color: #6d6c6c;
+            }
+        }
+    }
+    &__socials {
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+    }
+    &__social {
+        display: block;
+        font-size: 0;
+        transition: all .3s ease;
+        &:not(:last-child) {
+            margin-right: 14px;
+        }
+        &:hover {
+            opacity: .7;
+        }
+    }
+}

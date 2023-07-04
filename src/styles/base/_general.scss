@@ -1,0 +1,45 @@
+body {
+    font-family: 'Unbounded', cursive;
+}
+.center {
+    width: 100%;
+    max-width: 1560px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+.content {
+    &__wrap-in {
+        display: flex;
+    }
+    &__main {
+        width: calc(100% - 335px - 60px);
+    }
+    &__aside {
+        width: 335px;
+        margin-left: 60px;
+    }
+}
+
+.global {
+    &__block-title {
+        color: #191919;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 1.92px;
+    }
+}
+
+.content__aside .adv-banner__in {
+    padding-left: 0;
+    padding-right: 0;
+}
+.content__row {
+    margin-bottom: 40px;
+}
