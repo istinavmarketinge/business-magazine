@@ -1,0 +1,57 @@
+<div class="news-list glide">
+    <div class="news-list__in">
+        <div class="news-list__top">
+            <div class="news-list__title global__block-title">Финансовые показатели</div>
+            <div class="all__link">
+                <div class="arrow arrow--slider" data-glide-el="controls">
+                    <div class="arrow__slider arrow__slider--next" data-glide-dir="<">
+                        <img src="/img/prev.svg" width="100%" alt="">
+                    </div>
+                    <div class="arrow__slider arrow__slider--prev" data-glide-dir=">">
+                        <img src="/img/next.svg" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-list__bottom">
+            <div class="news-list__items news-list__items--slider" data-glide-el="track">
+                <div class="glide__slides">
+                    @@for ($i = 0; $i < 10; $i++) {
+                        <article class="news-list__item news-list__item--slider_item glide__slide">
+                            <a href="#" class="news-list__item_link">
+                                <div class="news-list__item_top">
+                                    <div class="news-list__item_image">
+                                        <img src="http://placehold.it/335x189" width="100%" alt="">
+                                    </div>
+                                    <h3 class="news-list__item_title">План по импортозамещению 2.0 запущен, заявил Минпромторг</h3>
+                                    <p class="news-list__item_text">Также в ведомстве сообщили, что успели заточить инструменты поддержки под эту задачу. Об этом рассказал первый замглавы...</p>
+                                </div>
+
+                                <div class="news-list__info">
+                                    <div class="news-list__info_item">
+                                        <div class="icon">
+                                            <img src="/img/up.svg" width="100%" alt="">
+                                        </div>
+                                        <div class="text">Экономика</div>
+                                    </div>
+                                    <div class="news-list__info_item">
+                                        <div class="icon">
+                                            <img src="/img/up.svg" width="100%" alt="">
+                                        </div>
+                                        <div class="text">20.05.2023</div>
+                                    </div>
+                                    <div class="news-list__info_item">
+                                        <div class="icon">
+                                            <img src="/img/up.svg" width="100%" alt="">
+                                        </div>
+                                        <div class="text">18:48</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

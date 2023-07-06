@@ -17,8 +17,17 @@
         display: flex;
         align-items: center;
     }
+    &__left {
+        @media all and (max-width: 1280px) {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
     &__region {
         margin-left: 40px;
+        @media all and (max-width: 1280px) {
+            margin-left: 0;
+        }
     }
     &__region-left {
         color: #6D6C6C;
@@ -26,6 +35,10 @@
         font-family: Unbounded;
         line-height: 110%;
         letter-spacing: 0.64px;
+        @media all and (max-width: 1280px) {
+            font-size: 12px;
+            letter-spacing: 0.48px;
+        }
     }
     &__region-dropdown {
         margin-left: 10px;
@@ -33,6 +46,10 @@
             color: #fff;
             display: flex;
             align-items: center;
+            @media all and (max-width: 1280px) {
+                font-size: 12px;
+                letter-spacing: 0.48px;
+            }
             &:after {
                 content: "";
                 display: block;
@@ -107,6 +124,16 @@
         }
         &:hover {
             opacity: .7;
+        }
+    }
+    &__burger_opener {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 22px;
+        div {
+            background: #FFF;
+            height: 2px;
         }
     }
 }

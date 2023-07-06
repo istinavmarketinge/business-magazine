@@ -1,0 +1,69 @@
+<div class="courses glide">
+    <div class="courses__in">
+        <div class="news-list__top">
+            <div class="news-list__title global__block-title">Курсы</div>
+            <div class="all__link">
+                <div class="arrow arrow--slider" data-glide-el="controls">
+                    <div class="arrow__slider arrow__slider--next" data-glide-dir="<">
+                        <img src="/img/prev.svg" width="100%" alt="">
+                    </div>
+                    <div class="arrow__slider arrow__slider--prev" data-glide-dir=">">
+                        <img src="/img/next.svg" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="courses__bottom">
+            <div class="courses__items courses__items--slider" data-glide-el="track">
+                <div class="glide__slides">
+                    @@for ($i = 0; $i < 5; $i++) {
+                        <article class="courses__item courses__item--slider_item glide__slide">
+                            <div class="courses__item_image">
+                                <img src="http://placehold.it/335x502" width="100%" alt="">
+                            </div>
+                            <div class="courses__item_overlay"></div>
+                            <a href="#" class="courses__item_link">
+                                <div class="courses__item_top">
+                                    <h3 class="courses__item_title">Профессия 
+                                        Бизнес-аналитик</h3>
+                                    <p class="courses__item_text">Вы научитесь собирать данные о финансах и бизнес-процессах, проводить продуктовые интервью и определять стратегии развития. </p>
+                                </div>
+
+                                <div class="courses__button">
+                                    <div class="courses__button-left">Узнать подробнее</div>
+                                    <div class="courses__button-right">
+                                        <div class="icon">
+                                            <img src="/img/arrow_right.svg" width="100%" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="courses__item courses__item--slider_item glide__slide">
+                            <div class="courses__item_image">
+                                <img src="http://placehold.it/335x502" width="100%" alt="">
+                            </div>
+                            <div class="courses__item_overlay"></div>
+                            <a href="#" class="courses__item_link">
+                                <div class="courses__item_top">
+                                    <h3 class="courses__item_title">Продвижение 
+                                        на маркетплейсах</h3>
+                                    <p class="courses__item_text">Получите специализацию аналитика маркетплейсов и сможете выйти на новый уровень доходов</p>
+                                </div>
+
+                                <div class="courses__button">
+                                    <div class="courses__button-left">Узнать подробнее</div>
+                                    <div class="courses__button-right">
+                                        <div class="icon">
+                                            <img src="/img/arrow_right.svg" width="100%" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

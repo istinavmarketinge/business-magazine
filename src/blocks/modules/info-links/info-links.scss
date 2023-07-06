@@ -5,6 +5,9 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 24px;
+        &--big_margin {
+            margin-bottom: 58px;
+        }
     }
     &__title {
         color: #191919;
@@ -13,6 +16,13 @@
         font-weight: 600;
         line-height: 140%;
         letter-spacing: 1.08px;
+    }
+    &__items {
+        &--with_general {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
     &__item {
         display: flex;
@@ -25,13 +35,55 @@
             border-bottom: 1px solid #180D2F;
         }
     }
+    @media all and (min-width: 961px) {
+    
+        &__items--with_general &__item {
+            width: calc(100% / 2 - 30px);
+            border-bottom: 1px solid #180D2F;
+            border-top: none;
+        }
+        &__items--with_general &__item:first-child {
+            width: 100%;
+            margin-bottom: -1px;
+            border-bottom: 1px solid #180D2F;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+    }
     &__item_image {
         width: 90px;
         font-size: 0;
     }
+    @media all and (min-width: 961px) {
+        &__items--with_general &__item:not(:first-child) &__item_image {
+            display: none;
+        }
+        &__items--with_general &__item:first-child &__item_image {
+            width: 200px;
+        }
+    }
     &__item_texts {
         width: calc(100% - 90px - 20px);
         margin-left: 20px;
+        &--full {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    @media all and (min-width: 961px) {
+        &__items--with_general &__item:not(:first-child) &__item_texts {
+            width: 100%;
+            margin-left: 0;
+        }
+        &__items--with_general &__item:first-child &__item_texts {
+            width: calc(100% - 200px - 20px);
+        }
+        &__items--with_general &__item:first-child &__item_texts {
+            margin-left: 0;
+            margin-right: 20px;
+            font-size: 18px;
+            letter-spacing: 1.08px;
+        }
     }
     &__item_left {
         display: flex;
@@ -57,7 +109,21 @@
         line-height: 140%;
         letter-spacing: 0.72px;
     }
+    @media all and (min-width: 961px) {
+        &__items--with_general &__item:first-child &__item_title {
+            font-size: 18px;
+            letter-spacing: 1.08px;
+        }
+    }
     &__item_bottom {
         margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    @media all and (min-width: 961px) {
+        &__items--with_general &__item:first-child &__item_bottom {
+            display: none;
+        }
     }
 }

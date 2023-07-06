@@ -1,4 +1,19 @@
 .adv-banner {
     padding-top: 40px;
     padding-bottom: 40px;
+    font-size: 0;
+    @media all and (max-width: 1280px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    &__in {
+        @media all and (max-width: 1280px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.content__wrap-in > .adv-banner .adv-banner__in {
+    padding: 0;
 }

@@ -1,0 +1,97 @@
+.courses {
+    margin-bottom: 80px;
+    &__items {
+        overflow: hidden;
+    }
+    &__item {
+        position: relative;
+        overflow: hidden;
+        height: auto;
+    }
+    &__item_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+    &__item_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        background: linear-gradient(0deg, #111418 0.01%, rgba(17, 21, 25, 0.89) 47.77%, rgba(16, 27, 37, 0.00) 100%);
+
+    }
+    &__item_link {
+        position: relative;
+        z-index: 3;
+        padding: 219px 22px 24px 22px;
+        display: block;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__item_title {
+        margin-top: 0;
+        margin-bottom: 12px;
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 1.08px;
+    }
+    &__item_text {
+        color: #FFF;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 180%;
+        letter-spacing: 0.48px;
+        margin: 0;
+    }
+    &__button {
+        display: flex;
+        border: 1px solid #FFF;
+        margin-top: 36px;
+        transition: all .3s ease;
+        
+    }
+    &__item_link:hover &__button {
+        background: #FF002E;
+    }
+    &__button-left {
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 140%;
+        letter-spacing: 0.64px;
+        padding: 13px;
+        text-align: center;
+        flex: 1 1 auto;
+    }
+    &__button-right {
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #FFF;
+        .icon {
+            width: 5px;
+            font-size: 0;
+        }
+    }
+}

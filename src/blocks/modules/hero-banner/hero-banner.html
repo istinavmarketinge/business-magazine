@@ -1,32 +1,36 @@
-<div class="hero-banner">
+<div class="hero-banner hero-banner--@@title_size hero-banner--info_@@info_size">
     <div class="hero-banner__image">
         <img src="@@image" alt="">
     </div>
     <div class="hero-banner__overlay"></div>
     <div class="hero-banner__in">
-        <div class="hero-banner__mark">Главный материал</div>
-        @@if (name === 'test' && nav === true) {
-            @@include('test.html')
+        @@if (marker !== "") {
+            <div class="hero-banner__mark">@@marker</div>
         }
-        <a href="#" class="hero-banner__name">@@name</a>
-        <div class="hero-banner__info">
-            <div class="hero-banner__info_item">
+        <a href="#" class="hero-banner__name hero-banner__name--@@title_size">@@name</a>
+        @@if (description !== "") {
+            <div class="hero-banner__description">
+                @@description
+            </div>
+        }
+        <div class="hero-banner__info hero-banner__info--@@info_size">
+            <div class="hero-banner__info_item hero-banner__info_item--@@info_size">
                 <div class="icon">
                     <img src="/img/up.svg" width="100%" alt="">
                 </div>
                 <div class="text">Экономика</div>
             </div>
-            <div class="hero-banner__info_item">
+            <div class="hero-banner__info_item hero-banner__info_item--@@info_size">
                 <div class="icon">
                     <img src="/img/up.svg" width="100%" alt="">
                 </div>
-                <div class="text">Экономика</div>
+                <div class="text">20.05.2023</div>
             </div>
-            <div class="hero-banner__info_item">
+            <div class="hero-banner__info_item hero-banner__info_item--@@info_size">
                 <div class="icon">
                     <img src="/img/up.svg" width="100%" alt="">
                 </div>
-                <div class="text">Экономика</div>
+                <div class="text">15:05</div>
             </div>
         </div>
     </div>
