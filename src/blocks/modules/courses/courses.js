@@ -10,13 +10,25 @@ const Courses = class Courses {
             perView: 3,
             gap: 10,
             bound: true,
+            peek: {
+                before: 0,
+                after: 100
+            },
             breakpoints: {
                 1280: {
-                    perView: 2
+                    perView: 2,
+                    peek: {
+                        before: 0,
+                        after: 0
+                    },
                 },
                 980: {
                     perView: 1,
-                    gap: 0
+                    gap: 0,
+                    peek: {
+                        before: 0,
+                        after: 0
+                    },
                 }
             }
         }).mount();
