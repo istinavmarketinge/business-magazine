@@ -85,6 +85,9 @@
         line-height: 1.2;
         
         text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
         &--big {
             font-size: 44px;
             letter-spacing: 2.64px;

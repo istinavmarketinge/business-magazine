@@ -2,13 +2,19 @@
     <div class="header__in center">
         <div class="header__left">
             <a href="/index.html" class="header__logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none"><path d="M23.674 26.904H13.06v10.884h10.645c2.705 0 4.897 2.088 4.897 4.664 0 2.576-2.192 4.665-4.898 4.665H13.062V58h10.613C32.69 58 40 51.04 40 42.452c0-8.587-7.31-15.548-16.326-15.548z" fill="#fff"/><path d="M0 20.684h13.061V58H0V20.684zM13.061 10.19H33.47v10.495H13.061V10.19z" fill="#fff"/><path fill="#FF002E" d="M0 0h13.02v10.189H0z"/></svg>
+                <img src="/img/logo.svg" width="100%" alt="">
             </a>
             <div class="header__region">
                 <div class="header__region-left">Регион:</div>
                 <div class="header__region-dropdown">
-                    <div class="active">Центр</div>
-                    <div class="dropdown"></div>
+                    <div class="active"><span>Центр</span></div>
+                    <div class="dropdown">
+                        <a href="#">Центр</a>
+                        <a href="#">Федеральный</a>
+                        <a href="#">Красноярск</a>
+                        <a href="#">Сибирь</a>
+                        <a href="#">Урал</a>
+                    </div>
                 </div>
             </div>
             <div class="header__burger_opener hide_on_desktop">
@@ -26,11 +32,68 @@
         </nav>
         <div class="header__right hide_on_tablet">
             <form class="header__search">
-                <button type="submit">
-                    <img src="/img/search.svg" alt="">
-                </button>
                 <input type="text" placeholder="Поиск по сайту">
+                <button type="submit">
+                    <img src="/img/search_white.svg" alt="">
+                </button>
+                <div class="header__search-line-active"></div>
+                <div class="header__search-line-to-active"></div>
             </form>
+            <div class="header__socials">
+                <a href="#" class="header__social header__social--vk"><img src="/img/vk.svg" alt=""></a>
+                <a href="#" class="header__social header__social--ok"><img src="/img/ok.svg" alt=""></a>
+                <a href="#" class="header__social header__social--tg"><img src="/img/tg.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="header__burger hide_on_desktop">
+        <div class="header__burger_in">
+            <form class="header__search">
+                <input type="text" placeholder="Поиск по сайту">
+                <button type="submit">
+                    <img src="/img/search_white.svg" alt="">
+                </button>
+                <div class="header__search-line-active"></div>
+                <div class="header__search-line-to-active"></div>
+            </form>
+            <div class="header__burger_menus">
+                <nav class="header__burger_menu">
+                    <ul>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Мероприятия</a></li>
+                        <li><a href="#">Номер журнала</a></li>
+                    </ul>
+                </nav>
+                <nav class="header__burger_menu">
+                    <ul>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Авторские материалы</a></li>
+                        <li><a href="#">Финансовые показатели</a></li>
+                        <li><a href="#">Курсы</a></li>
+                        <li><a href="#">Эмитенты</a></li>
+                        <li><a href="#">Мнения экспертов</a></li>
+                        <li><a href="#">Последние заголовки</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__burger_phone">
+                <div class="title">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <g clip-path="url(#clip0_443_11029)">
+                            <path d="M8.80653 6.42394L11.939 9.55641L10.3535 11.1419C10.0772 11.4171 9.74894 11.6346 9.38785 11.7819C9.02675 11.9292 8.64 12.0033 8.25003 11.9999C4.62606 11.9999 9.75499e-05 7.37393 9.75499e-05 3.74996C-0.00307408 3.35996 0.0711228 2.9732 0.218396 2.61205C0.365668 2.25091 0.583093 1.92255 0.858091 1.64598L2.44358 0.0609994L5.57605 3.19347L3.51357 5.25595C4.12672 6.71308 5.28434 7.87338 6.74004 8.48992L8.80653 6.42394ZM11 4.99995H12C11.9985 3.67433 11.4713 2.40342 10.5339 1.46606C9.59658 0.528703 8.32567 0.00145578 7.00004 0V0.999991C8.06053 1.00118 9.07725 1.42299 9.82713 2.17287C10.577 2.92275 10.9988 3.93946 11 4.99995ZM9.00002 4.99995H10C9.99922 4.20456 9.6829 3.44196 9.12047 2.87953C8.55803 2.3171 7.79544 2.00078 7.00004 1.99998V2.99997C7.53047 2.99997 8.03917 3.21068 8.41424 3.58575C8.78931 3.96082 9.00002 4.46953 9.00002 4.99995Z" fill="white" fill-opacity="0.4"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_443_11029">
+                            <rect width="12" height="12" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                    </div>
+                    <div class="text">Телефон редакции: </div>
+                </div>
+                <a href="tel:+7 495 727-01-67" class="phone">+7 495 727-01-67</a>
+            </div>
             <div class="header__socials">
                 <a href="#" class="header__social header__social--vk"><img src="/img/vk.svg" alt=""></a>
                 <a href="#" class="header__social header__social--ok"><img src="/img/ok.svg" alt=""></a>

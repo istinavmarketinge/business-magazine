@@ -109,6 +109,9 @@
         line-height: 140%;
         letter-spacing: 0.72px;
     }
+    &__item:hover &__item_title {
+        text-decoration: underline;
+    }
     @media all and (min-width: 961px) {
         &__items--with_general &__item:first-child &__item_title {
             font-size: 18px;
