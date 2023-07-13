@@ -1,0 +1,22 @@
+.breadcrumbs {
+    margin-bottom: 40px;
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding-left: 0;
+    }
+    &__item-link {
+        color: #6F6B77;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 200;
+        line-height: 180%;
+    }
+    &__item-link-active {
+        color: #180D2F;
+    }
+    &__item-separator {
+        margin: 0 5px;
+    }
+}

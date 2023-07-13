@@ -1,0 +1,17 @@
+<div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            @@if (name !== "") {
+                <a href="#" class="breadcrumbs__item-link">@@name</a>
+            }
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item-separator">
+                <span>/</span>
+        </li>
+        <li class="breadcrumbs__item">
+            @@if (subname !== "") {
+                <a href="#" class="breadcrumbs__item-link breadcrumbs__item-link-active">@@subname</a>
+            }
+        </li>
+    </ul>
+</div>
