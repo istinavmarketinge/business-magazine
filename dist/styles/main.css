@@ -1992,6 +1992,10 @@ body {
   transform: translate(50%, 0%);
 }
 
+.article-page__banner__item.article-banner-image img:last-child {
+  display: none;
+}
+
 @media all and (min-width: 961px) {
   .info-links__items--with_general .info-links__item {
     width: calc(50% - 30px);
@@ -2331,6 +2335,110 @@ body {
     font-size: 11px;
     letter-spacing: 0.44px;
     padding: 8px;
+  }
+
+  .article-page__info_item:last-child .text {
+    display: none;
+  }
+
+  .article-page__info_item {
+    font-size: 10px;
+    line-height: 180%;
+    letter-spacing: 0.6px;
+    grid-gap: 8px;
+  }
+
+  .article-page__text__bold {
+    margin: 40px 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.48px;
+  }
+
+  .article-page__text__light {
+    padding-bottom: 40px;
+  }
+
+  .article-page__text__light h2 {
+    font-size: 17px;
+    letter-spacing: 1.02px;
+    margin-bottom: 18px;
+    margin-top: 40px;
+  }
+
+  .article-page__text__light p {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.48px;
+  }
+
+  .article-page__text__light.min-margin {
+    padding-bottom: 20px;
+  }
+
+  .article-page__text__light.min-margin h2 {
+    margin-top: 20px;
+  }
+
+  .article-page__text__light.min-margin ul {
+    padding-left: 20px;
+  }
+
+  .article-page__text__light.middle-weight p {
+    font-size: 12px;
+    letter-spacing: 0.48px;
+  }
+
+  .article-page__banner {
+    overflow: hidden;
+  }
+
+  .article-page__banner__in {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 28px 60px 24px;
+  }
+
+  .article-page__banner__item:first-child {
+    width: 100%;
+    margin-bottom: 46px;
+    align-items: flex-start;
+  }
+
+  .article-page__banner__item {
+    flex-direction: column;
+  }
+
+  .article-page__banner__item-button {
+    font-size: 11px;
+    font-weight: 720;
+    line-height: 140%;
+    letter-spacing: 0.44px;
+  }
+
+  .article-page__banner__item-button:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 128px;
+  }
+
+  .article-page__banner__item-button:last-child {
+    width: 146px;
+  }
+
+  .article-page__banner__item.article-banner-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .article-page__banner__item.article-banner-image img:first-child {
+    display: none;
+  }
+
+  .article-page__banner__item.article-banner-image img:last-child {
+    display: block;
   }
 }
 
