@@ -121,3 +121,6 @@
     }
 }
 
+.search__list:not(.isOpened) .search__list-item:nth-of-type(n+8) {
+    display: none;
+}

@@ -3,6 +3,9 @@
     background: #180D2F;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media all and (max-width: 991px) {
+        margin-top: 60px;
+    }
     &__in {
         display: flex;
         justify-content: space-between;

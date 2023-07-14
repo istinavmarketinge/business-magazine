@@ -235,6 +235,121 @@ var NewsList = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/page-tabs/page-tabs.js":
+/*!***************************************************!*\
+  !*** ./src/blocks/modules/page-tabs/page-tabs.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var PageTabs = /*#__PURE__*/function () {
+  function PageTabs() {
+    _classCallCheck(this, PageTabs);
+    this.slider = null;
+  }
+  _createClass(PageTabs, [{
+    key: "initSlider",
+    value: function initSlider() {
+      if (!document.querySelector('.page-tabs__in.glide')) return;
+      this.slider = new _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__["default"]('.page-tabs__in.glide', {
+        perView: 4,
+        gap: 16,
+        bound: true,
+        peek: {
+          before: 0,
+          after: 100
+        },
+        breakpoints: {
+          1280: {
+            perView: 3,
+            peek: {
+              before: 0,
+              after: 100
+            }
+          },
+          980: {
+            perView: 2
+          }
+        }
+      }).mount();
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.initSlider();
+    }
+  }]);
+  return PageTabs;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PageTabs);
+
+/***/ }),
+
+/***/ "./src/blocks/modules/search/search.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/modules/search/search.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var SearchButtonAll = /*#__PURE__*/function () {
+  function SearchButtonAll() {
+    _classCallCheck(this, SearchButtonAll);
+  }
+  _createClass(SearchButtonAll, [{
+    key: "accordionFunc",
+    value: function accordionFunc(btnSelector, listSelector, parentSelector) {
+      if (document.querySelector(btnSelector)) {
+        var button = document.querySelector(btnSelector);
+        button.addEventListener('click', function (event) {
+          var parent = event.target.closest(parentSelector);
+          var list = parent.querySelector(listSelector);
+          button.classList.toggle("isOpened");
+          list.classList.toggle('isOpened');
+        });
+      }
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.accordionFunc('.search__button-all', '.search__list', '.search__list-wrapper');
+    }
+  }]);
+  return SearchButtonAll;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchButtonAll);
+
+// if (document.querySelector('.search__button-all')) {
+//     document.querySelector('.search__button-all').addEventListener('click', (event) => {
+//         event.target.classList.toggle("isOpened");
+//         event.target.closest(".search__list-wrapper").querySelector('.search__list').classList.toggle('isOpened');
+//         console.log(event);
+
+//     });
+// }
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -246,6 +361,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
 /* harmony import */ var _modules_courses_courses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/courses/courses */ "./src/blocks/modules/courses/courses.js");
 /* harmony import */ var _modules_emitents_emitents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/emitents/emitents */ "./src/blocks/modules/emitents/emitents.js");
+/* harmony import */ var _modules_search_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/search/search */ "./src/blocks/modules/search/search.js");
+/* harmony import */ var _modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/page-tabs/page-tabs */ "./src/blocks/modules/page-tabs/page-tabs.js");
+
+
 
 
 
@@ -259,6 +378,10 @@ window.app.courses = new _modules_courses_courses__WEBPACK_IMPORTED_MODULE_2__["
 window.app.courses.init();
 window.app.emitents = new _modules_emitents_emitents__WEBPACK_IMPORTED_MODULE_3__["default"]();
 window.app.emitents.init();
+window.app.searchbuttonall = new _modules_search_search__WEBPACK_IMPORTED_MODULE_4__["default"]();
+window.app.searchbuttonall.init();
+window.app.pagetabs = new _modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5__["default"]();
+window.app.pagetabs.init();
 
 /***/ })
 

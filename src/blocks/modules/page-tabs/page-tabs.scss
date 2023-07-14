@@ -1,0 +1,35 @@
+.page-tabs {
+    color: #180D2F;
+    margin-bottom: 40px;
+    @media all and (max-width:991px) {
+        margin-bottom: 32px;
+    }
+    &__item {
+        padding: 10px;
+        border: 1px solid #787088;
+        font-size: 16px;
+        font-weight: 720;
+        line-height: 140%;
+        letter-spacing: 0.64px;
+        text-align: center;
+        white-space: nowrap;
+        position: relative;
+        @media all and (max-width:991px) {
+            font-size: 11px;
+            letter-spacing: 0.44px;
+            padding: 8px;
+        }
+    }
+    &__item:first-child:after {
+        content: "";
+        position: absolute;
+        top: 23%;
+        right: 10px;
+        width: 6px;
+        height: 22px;
+        background: url("/img/arrow-tabs.svg") 0 0/contain no-repeat;
+    }
+    &__list {
+        margin: 0;
+    }
+}
