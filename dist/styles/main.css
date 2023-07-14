@@ -1907,7 +1907,8 @@ body {
   margin-bottom: 20px;
 }
 
-.article-page__text__light p {
+.article-page__text__light p,
+.article-page__text__light ul li {
   font-size: 16px;
   font-weight: 200;
   line-height: 200%;
@@ -2366,7 +2367,8 @@ body {
     margin-top: 40px;
   }
 
-  .article-page__text__light p {
+  .article-page__text__light p,
+  .article-page__text__light ul li {
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 0.48px;
