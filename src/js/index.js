@@ -4,6 +4,7 @@ import Courses from "%modules%/courses/courses";
 import Emitents from "%modules%/emitents/emitents";
 import SearchButtonAll from "%modules%/search/search";
 import PageTabs from "%modules%/page-tabs/page-tabs";
+import ArticleSlider from "%modules%/article-page/article-page";
 
 
 
@@ -26,3 +27,6 @@ window.app.searchbuttonall.init();
 
 window.app.pagetabs = new PageTabs();
 window.app.pagetabs.init();
+
+window.app.articleslider = new ArticleSlider();
+window.app.articleslider.init();
