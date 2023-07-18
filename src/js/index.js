@@ -25,8 +25,8 @@ window.app.emitents.init();
 window.app.searchbuttonall = new SearchButtonAll();
 window.app.searchbuttonall.init();
 
-window.app.pagetabs = new PageTabs();
-window.app.pagetabs.init();
+// window.app.pagetabs = new PageTabs();
+// window.app.pagetabs.init();
 
 window.app.articleslider = new ArticleSlider();
 window.app.articleslider.init();

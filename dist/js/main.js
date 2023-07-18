@@ -478,8 +478,10 @@ window.app.emitents = new _modules_emitents_emitents__WEBPACK_IMPORTED_MODULE_3_
 window.app.emitents.init();
 window.app.searchbuttonall = new _modules_search_search__WEBPACK_IMPORTED_MODULE_4__["default"]();
 window.app.searchbuttonall.init();
-window.app.pagetabs = new (_modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5___default())();
-window.app.pagetabs.init();
+
+// window.app.pagetabs = new PageTabs();
+// window.app.pagetabs.init();
+
 window.app.articleslider = new _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_6__["default"]();
 window.app.articleslider.init();
 
