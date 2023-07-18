@@ -10,6 +10,7 @@ const ArticleSlider = class ArticleSlider {
             perView: 1,
             gap: 29,
             bound: true,
+            startAt: 1,
             peek: {
                 before: 168,
                 after: 168
