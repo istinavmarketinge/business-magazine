@@ -141,8 +141,17 @@
         align-items: center;
         padding-bottom: 8px;
         position: relative;
+        padding-left: 38px;
+        transition: all .3s ease;
+        background: #180D2F;
+        box-sizing: border-box;
+        @media all and (min-width: 1281px) {
+            width: 197px;
+        }
+        
         @media all and (max-width: 1280px) {
             margin-bottom: 30px;
+
         }
         &-line-active {
             position: absolute;
@@ -177,12 +186,12 @@
         input {
             padding: 0;
             margin: 0;
-            width: 161px;
             background: transparent;
             border: none;
             outline: none;
             opacity: 0.5;
             transition: all .3s ease;
+            width: calc(100% - 36px);
             @media all and (max-width: 1280px) {
                 width: 100%;
             }

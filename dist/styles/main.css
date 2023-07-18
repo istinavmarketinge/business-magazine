@@ -665,6 +665,10 @@ body {
   align-items: center;
   padding-bottom: 8px;
   position: relative;
+  padding-left: 38px;
+  transition: all 0.3s ease;
+  background: #180D2F;
+  box-sizing: border-box;
 }
 
 .header__search-line-active {
@@ -703,12 +707,12 @@ body {
 .header__search input {
   padding: 0;
   margin: 0;
-  width: 161px;
   background: transparent;
   border: none;
   outline: none;
   opacity: 0.5;
   transition: all 0.3s ease;
+  width: calc(100% - 36px);
 }
 
 .header__search input,
@@ -1856,18 +1860,24 @@ body {
   overflow: auto;
   grid-gap: 16px;
   position: relative;
+  padding-bottom: 8px;
 }
 
 .page-tabs__list::-webkit-scrollbar {
-  height: 50px;
+  height: 5px;
+  border-radius: 5px;
+  width: 10px;
 }
 
 .page-tabs__list::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #f1f1f1;
 }
 
-.page-tabs__list ::-webkit-scrollbar-thumb {
-  background-color: transparent;
+.page-tabs__list::-webkit-scrollbar-thumb {
+  background-color: #180D2F;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
 }
 
 .article-page {
@@ -2103,6 +2113,10 @@ body {
 @media all and (min-width: 1281px) {
   .hide_on_desktop {
     display: none !important;
+  }
+
+  .header__search {
+    width: 197px;
   }
 
   .hero-banner__in {

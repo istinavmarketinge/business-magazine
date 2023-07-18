@@ -203,6 +203,12 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var Header = /*#__PURE__*/function () {
   function Header() {
     _classCallCheck(this, Header);
+    this.initialSearchWidth = document.querySelector('.header__search').offsetWidth;
+    this.initialMenuhWidth = document.querySelector('.header__middle').offsetWidth;
+    this.initialLogoWidth = document.querySelector('.header__left').offsetWidth;
+    this.initialRightWidth = document.querySelector('.header__right').offsetWidth;
+    this.initialCenterWidth = document.querySelector('.header__in').offsetWidth;
+    this.space = (this.initialCenterWidth - this.initialLogoWidth - this.initialRightWidth - this.initialMenuhWidth) / 2;
   }
   _createClass(Header, [{
     key: "toggleRegion",
@@ -230,11 +236,50 @@ var Header = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "toggleFocus",
+    value: function toggleFocus() {
+      var _this = this;
+      if (!document.querySelector('.header__search input')) return;
+      document.querySelector('.header__search input').addEventListener('focus', function (event) {
+        event.target.closest('.header__search').classList.add('isOpened');
+        document.querySelector('.header__search').style.marginLeft = (_this.initialMenuhWidth + _this.space) * -1 + 'px';
+        document.querySelector('.header__search').style.width = _this.initialMenuhWidth + _this.space + _this.initialSearchWidth + 'px';
+      });
+      console.log((this.initialCenterWidth - this.initialLogoWidth - this.initialRightWidth - this.initialMenuhWidth) / 2);
+    }
+  }, {
+    key: "toggleBlur",
+    value: function toggleBlur() {
+      var _this2 = this;
+      if (!document.querySelector('.header__search input')) return;
+      document.querySelector('.header__search input').addEventListener('blur', function (event) {
+        event.target.closest('.header__search').classList.remove('isOpened');
+        document.querySelector('.header__search').style.marginLeft = 0 + 'px';
+        document.querySelector('.header__search').style.width = _this2.initialSearchWidth + 'px';
+      });
+    }
+  }, {
+    key: "onWindowResize",
+    value: function onWindowResize() {
+      var _this3 = this;
+      window.addEventListener('resize', function () {
+        _this3.initialSearchWidth = document.querySelector('.header__search').offsetWidth;
+        _this3.initialMenuhWidth = document.querySelector('.header__middle').offsetWidth;
+        _this3.initialLogoWidth = document.querySelector('.header__left').offsetWidth;
+        _this3.initialRightWidth = document.querySelector('.header__right').offsetWidth;
+        _this3.initialCenterWidth = document.querySelector('.header__in').offsetWidth;
+        _this3.space = (_this3.initialCenterWidth - _this3.initialLogoWidth - _this3.initialRightWidth - _this3.initialMenuhWidth) / 2;
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       this.toggleRegion();
       this.closeRegion();
       this.toggleBurger();
+      this.toggleFocus();
+      this.toggleBlur();
+      this.onWindowResize();
     }
   }]);
   return Header;

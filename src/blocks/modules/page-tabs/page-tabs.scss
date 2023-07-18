@@ -41,14 +41,20 @@
         overflow: auto;
         grid-gap: 16px;
         position: relative;
+        padding-bottom: 8px;
         &::-webkit-scrollbar {
-            height: 50px;
+            height: 5px;
+            border-radius: 5px;
+            width: 10px;
         }
         &::-webkit-scrollbar-track {
-            background-color: transparent;
+            background-color: #f1f1f1;
         }
-        ::-webkit-scrollbar-thumb {
-            background-color: transparent;
+        &::-webkit-scrollbar-thumb {
+            background-color: #180D2F;
+            width: 10px;
+            height: 5px;
+            border-radius: 5px;
         }
     }
 }

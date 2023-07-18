@@ -1,5 +1,13 @@
 const Header = class Header {
-    constructor() { }
+    constructor() { 
+        this.initialSearchWidth = document.querySelector('.header__search').offsetWidth;
+        this.initialMenuhWidth = document.querySelector('.header__middle').offsetWidth;
+        this.initialLogoWidth = document.querySelector('.header__left').offsetWidth;
+        this.initialRightWidth = document.querySelector('.header__right').offsetWidth;
+        this.initialCenterWidth = document.querySelector('.header__in').offsetWidth;
+        this.space = (this.initialCenterWidth - this.initialLogoWidth -  this.initialRightWidth - this.initialMenuhWidth) / 2;
+
+    }
     toggleRegion() {
         if (!document.querySelector('.header__region-dropdown .active')) return;
         document.querySelector('.header__region-dropdown .active').addEventListener('click', (event) => {
@@ -19,10 +27,41 @@ const Header = class Header {
             document.querySelector('.header__burger').classList.toggle('isOpened');
         })
     }
+    toggleFocus() {
+        if (!document.querySelector('.header__search input')) return;
+        document.querySelector('.header__search input').addEventListener('focus', (event) => {
+            event.target.closest('.header__search').classList.add('isOpened');
+            document.querySelector('.header__search').style.marginLeft = (this.initialMenuhWidth + this.space) * -1 + 'px';
+            document.querySelector('.header__search').style.width = this.initialMenuhWidth + this.space + this.initialSearchWidth + 'px';
+        })
+        console.log((this.initialCenterWidth - this.initialLogoWidth -  this.initialRightWidth - this.initialMenuhWidth) / 2);
+        
+    }
+    toggleBlur() {
+        if (!document.querySelector('.header__search input')) return;
+        document.querySelector('.header__search input').addEventListener('blur', (event) => {
+            event.target.closest('.header__search').classList.remove('isOpened');
+            document.querySelector('.header__search').style.marginLeft = 0 + 'px';
+            document.querySelector('.header__search').style.width = this.initialSearchWidth + 'px';
+        })
+    }
+    onWindowResize() {
+        window.addEventListener('resize', () => {
+            this.initialSearchWidth = document.querySelector('.header__search').offsetWidth;
+            this.initialMenuhWidth = document.querySelector('.header__middle').offsetWidth;
+            this.initialLogoWidth = document.querySelector('.header__left').offsetWidth;
+            this.initialRightWidth = document.querySelector('.header__right').offsetWidth;
+            this.initialCenterWidth = document.querySelector('.header__in').offsetWidth;
+            this.space = (this.initialCenterWidth - this.initialLogoWidth -  this.initialRightWidth - this.initialMenuhWidth) / 2;
+        } )
+    }
     init() {
         this.toggleRegion();
         this.closeRegion();
         this.toggleBurger();
+        this.toggleFocus();
+        this.toggleBlur();
+        this.onWindowResize();
     }
 }
 
