@@ -33,7 +33,7 @@ var ArticleSlider = /*#__PURE__*/function () {
         perView: 1,
         gap: 29,
         bound: true,
-        startAt: 1,
+        type: "carousel",
         peek: {
           before: 168,
           after: 168
