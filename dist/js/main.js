@@ -289,6 +289,46 @@ var Header = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/material-chooser/material-chooser.js":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/modules/material-chooser/material-chooser.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var MaterialChooser = /*#__PURE__*/function () {
+  function MaterialChooser() {
+    _classCallCheck(this, MaterialChooser);
+  }
+  _createClass(MaterialChooser, [{
+    key: "addClickListener",
+    value: function addClickListener() {
+      document.querySelector('.material-chooser__selector').addEventListener('click', function (e) {
+        e.target.classList.toggle('isOpened');
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.addClickListener();
+    }
+  }]);
+  return MaterialChooser;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MaterialChooser);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/news-list-slider/news-list-slider.js":
 /*!*****************************************************************!*\
   !*** ./src/blocks/modules/news-list-slider/news-list-slider.js ***!
@@ -461,6 +501,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/page-tabs/page-tabs */ "./src/blocks/modules/page-tabs/page-tabs.js");
 /* harmony import */ var _modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/article-page/article-page */ "./src/blocks/modules/article-page/article-page.js");
+/* harmony import */ var _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/material-chooser/material-chooser */ "./src/blocks/modules/material-chooser/material-chooser.js");
+
 
 
 
@@ -485,6 +527,8 @@ window.app.searchbuttonall.init();
 
 window.app.articleslider = new _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_6__["default"]();
 window.app.articleslider.init();
+window.app.materialChooser = new _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_7__["default"]();
+window.app.materialChooser.init();
 
 /***/ })
 

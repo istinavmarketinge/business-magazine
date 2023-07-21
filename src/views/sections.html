@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        @@include("../blocks/modules/header/header.html")
+        @@include("../blocks/modules/adv-banner/adv-banner.html", {
+            "image_link": "http://placehold.it/1520x260"
+        })
+        <div class="content__wrap">
+            <div class="content__wrap-in center">
+                <main class="content__main">
+                    @@include("../blocks/modules/breadcrumbs/breadcrumbs.html", {
+                        "name": "Главная",
+                        "subname": "Авторские материалы"
+                     })
+                     @@include("../blocks/modules/page-tabs/page-tabs.html")
+                     <div class="pages-list__top">
+                        <div class="pages-list__title">Авторские материалы</div>
+                    </div>
+                    @@include("../blocks/modules/material-chooser/material-chooser.html")
+                    @@include("../blocks/modules/hero-banner/hero-banner.html", {
+                        "image": "http://placehold.it/1125x520",
+                        "name": "На фоне санкций Россия вернулась в десятку крупнейших экономик",
+                        "marker": "Главный материал",
+                        "category": "Экономика",
+                        "date": "07.05.2023",
+                        "time": "09:08",
+                        "title_size": "big",
+                        "info_size": "default",
+                        "description": ""
+                    })
+                    @@include("../blocks/modules/news-list/news-list.html")
+                    <div class="content__row">
+                        <div class="content__row-small">
+                            @@include("../blocks/modules/info-links-no-title/info-links-no-title.html")
+                        </div>
+                        <div class="content__row-big">
+                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
+                                "image": "http://placehold.it/1125x520",
+                                "name": "Власти повременят с запуском грузового движения по Крымскому мосту во избежание провокаций",
+                                "category": "Экономика",
+                                "marker": "",
+                                "date": "07.05.2023",
+                                "time": "09:08",
+                                "title_size": "small",
+                                "info_size": "default",
+                                "description": ""
+                            })
+                        </div>
+                    </div>
+                    <div class="content__row">
+                        <div class="content__row-small">
+                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
+                                "image": "http://placehold.it/1125x520",
+                                "name": "В четырех российских регионах усилился рост уровня бедности",
+                                "category": "Экономика",
+                                "marker": "",
+                                "date": "07.05.2023",
+                                "time": "09:08",
+                                "title_size": "small",
+                                "info_size": "small",
+                                "description": "За 2022 год в четырех регионах РФ вырос уровень бедности. Такие данные озвучила вице-премьер Татьяна Голикова, во время выступления на расширенном заседании коллегии Минтруда."
+                            })
+                        </div>
+                        <div class="content__row-big">
+                            @@include("../blocks/modules/info-links-with-general/info-links-with-general.html")
+                        </div>
+                    </div>
+                </main>
+                <aside class="content__aside hide_on_tablet">
+                    @@include("../blocks/modules/info-links/info-links.html")
+                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                        "image_link": "http://placehold.it/335x564"
+                    })
+                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                        "image_link": "http://placehold.it/335x564"
+                    })
+                </aside>
+            </div>
+            <div class="content__wrap-in center">
+                @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                    "image_link": "http://placehold.it/1520x260",
+                })
+                
+            </div>
+            <div class="content__wrap-in center">
+                <main class="content__main">
+                    <div class="news-list__top">
+                        <div class="news-list__title global__block-title">Авторские материалы</div>
+                        <a href="#" class="all__link">
+                            <div class="text">Больше  материалов</div>
+                            <div class="arrow">
+                                <img src="img/all_arrow.svg" width="100%" alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content__row">
+                        
+                        <div class="content__row-big">
+                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
+                                "image": "http://placehold.it/1125x520",
+                                "name": "Как вовремя разглядеть выгорание — болезнь современного делового человека",
+                                "category": "Экономика",
+                                "marker": "",
+                                "date": "07.05.2023",
+                                "time": "09:08",
+                                "title_size": "small",
+                                "info_size": "default",
+                                "description": ""
+                            })
+                        </div>
+                        <div class="content__row-small">
+                            <article class="news-list__item">
+                                <a href="#" class="news-list__item_link">
+                                    <div class="news-list__item_top">
+                                        <div class="news-list__item_image">
+                                            <img src="http://placehold.it/335x189" width="100%" alt="">
+                                        </div>
+                                        <h3 class="news-list__item_title">Учитель, воспитай ученика: чтоб было у кого потом учиться</h3>
+                                        <p class="news-list__item_text">Вынесенное в заголовок заключительное двустишие из восьмистишия (1961, без названия) Евгения Михайловича Винокурова...</p>
+                                    </div>
+        
+                                    <div class="news-list__info">
+                                        <div class="news-list__info_item">
+                                            <div class="icon">
+                                                <img src="img/up.svg" width="100%" alt="">
+                                            </div>
+                                            <div class="text">Экономика</div>
+                                        </div>
+                                        <div class="news-list__info_item">
+                                            <div class="icon">
+                                                <img src="img/up.svg" width="100%" alt="">
+                                            </div>
+                                            <div class="text">20.05.2023</div>
+                                        </div>
+                                        <div class="news-list__info_item">
+                                            <div class="icon">
+                                                <img src="img/up.svg" width="100%" alt="">
+                                            </div>
+                                            <div class="text">18:48</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="content__row">
+                        
+                        <div class="content__row-big content__row-big_row">
+                            <div class="content__row-big_item">
+                                <article class="news-list__item">
+                                    <a href="#" class="news-list__item_link">
+                                        <div class="news-list__item_top">
+                                            <div class="news-list__item_image">
+                                                <img src="http://placehold.it/335x189" width="100%" alt="">
+                                            </div>
+                                            <h3 class="news-list__item_title">Сооснователь «Технониколь» посоветовал затянуть пояса и сажать картошку</h3>
+                                            <p class="news-list__item_text">Госкапитализм в России продемонстрировал ограниченность своих возможностей. Госрегулированием ситуацию не изменить....</p>
+                                        </div>
+            
+                                        <div class="news-list__info">
+                                            <div class="news-list__info_item">
+                                                <div class="icon">
+                                                    <img src="img/up.svg" width="100%" alt="">
+                                                </div>
+                                                <div class="text">Экономика</div>
+                                            </div>
+                                            <div class="news-list__info_item">
+                                                <div class="icon">
+                                                    <img src="img/up.svg" width="100%" alt="">
+                                                </div>
+                                                <div class="text">20.05.2023</div>
+                                            </div>
+                                            <div class="news-list__info_item">
+                                                <div class="icon">
+                                                    <img src="img/up.svg" width="100%" alt="">
+                                                </div>
+                                                <div class="text">18:48</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="content__row-big_item">
+                                @@include("../blocks/modules/info-links-no-title/info-links-no-title.html")
+                            </div>
+                        </div>
+                        <div class="content__row-small">
+                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
+                                "image": "http://placehold.it/1125x520",
+                                "name": "Карамелье Марина Романова – о «хрустальном» деле своей жизни",
+                                "category": "Экономика",
+                                "marker": "",
+                                "date": "07.05.2023",
+                                "time": "09:08",
+                                "title_size": "small",
+                                "info_size": "small",
+                                "description": "Ее мягкая сила — в ее таланте, а еще в спокойной уверенности в том, что выбрала верный путь и бесконечном творческом..."
+                            })
+                        </div>
+                    </div>
+                    <div class="content__row">
+                        @@include("../blocks/modules/news-list-slider/news-list-slider.html")
+                    </div>
+                </main>
+                <aside class="content__aside hide_on_tablet">
+                    @@include("../blocks/modules/info-links-without-image/info-links-without-image.html")
+                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                        "image_link": "http://placehold.it/335x564"
+                    })
+                </aside>                
+            </div>
+            <div class="content__wrap-in center">
+                @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                    "image_link": "http://placehold.it/1520x260",
+                })
+            </div>
+            <div class="content__wrap-in center">
+                <main class="content__main">
+                    @@include("../blocks/modules/courses/courses.html")
+                    @@include("../blocks/modules/emitents/emitents.html")
+                </main>
+                <aside class="content__aside content__aside--no_padding_top hide_on_tablet">
+                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                        "image_link": "http://placehold.it/335x564"
+                    })
+                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                        "image_link": "http://placehold.it/335x564"
+                    })
+                </aside>
+            </div>
+        </div>
+        @@include("../blocks/modules/footer/footer.html")
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
