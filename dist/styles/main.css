@@ -1051,6 +1051,10 @@ body {
   margin-bottom: 40px;
 }
 
+.news-list--smallMargin {
+  margin-top: 0px;
+}
+
 .news-list__top {
   display: flex;
   align-items: center;

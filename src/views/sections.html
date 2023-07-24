@@ -42,73 +42,6 @@
                         <div class="pages-list__title">Авторские материалы</div>
                     </div>
                     @@include("../blocks/modules/material-chooser/material-chooser.html")
-                    @@include("../blocks/modules/hero-banner/hero-banner.html", {
-                        "image": "http://placehold.it/1125x520",
-                        "name": "На фоне санкций Россия вернулась в десятку крупнейших экономик",
-                        "marker": "Главный материал",
-                        "category": "Экономика",
-                        "date": "07.05.2023",
-                        "time": "09:08",
-                        "title_size": "big",
-                        "info_size": "default",
-                        "description": ""
-                    })
-                    @@include("../blocks/modules/news-list/news-list.html")
-                    <div class="content__row">
-                        <div class="content__row-small">
-                            @@include("../blocks/modules/info-links-no-title/info-links-no-title.html")
-                        </div>
-                        <div class="content__row-big">
-                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
-                                "image": "http://placehold.it/1125x520",
-                                "name": "Власти повременят с запуском грузового движения по Крымскому мосту во избежание провокаций",
-                                "category": "Экономика",
-                                "marker": "",
-                                "date": "07.05.2023",
-                                "time": "09:08",
-                                "title_size": "small",
-                                "info_size": "default",
-                                "description": ""
-                            })
-                        </div>
-                    </div>
-                    <div class="content__row">
-                        <div class="content__row-small">
-                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
-                                "image": "http://placehold.it/1125x520",
-                                "name": "В четырех российских регионах усилился рост уровня бедности",
-                                "category": "Экономика",
-                                "marker": "",
-                                "date": "07.05.2023",
-                                "time": "09:08",
-                                "title_size": "small",
-                                "info_size": "small",
-                                "description": "За 2022 год в четырех регионах РФ вырос уровень бедности. Такие данные озвучила вице-премьер Татьяна Голикова, во время выступления на расширенном заседании коллегии Минтруда."
-                            })
-                        </div>
-                        <div class="content__row-big">
-                            @@include("../blocks/modules/info-links-with-general/info-links-with-general.html")
-                        </div>
-                    </div>
-                </main>
-                <aside class="content__aside hide_on_tablet">
-                    @@include("../blocks/modules/info-links/info-links.html")
-                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
-                        "image_link": "http://placehold.it/335x564"
-                    })
-                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
-                        "image_link": "http://placehold.it/335x564"
-                    })
-                </aside>
-            </div>
-            <div class="content__wrap-in center">
-                @@include("../blocks/modules/adv-banner/adv-banner.html", {
-                    "image_link": "http://placehold.it/1520x260",
-                })
-                
-            </div>
-            <div class="content__wrap-in center">
-                <main class="content__main">
                     <div class="news-list__top">
                         <div class="news-list__title global__block-title">Авторские материалы</div>
                         <a href="#" class="all__link">
@@ -224,15 +157,37 @@
                         </div>
                     </div>
                     <div class="content__row">
-                        @@include("../blocks/modules/news-list-slider/news-list-slider.html")
+                        @@include("../blocks/modules/news-list-no-slider/news-list-no-slider.html")
+                    </div>
+                    <div class="content__row">
+                        
+                        <div class="content__row-big">
+                            @@include("../blocks/modules/hero-banner/hero-banner.html", {
+                                "image": "http://placehold.it/1125x520",
+                                "name": "Как вовремя разглядеть выгорание — болезнь современного делового человека",
+                                "category": "Экономика",
+                                "marker": "",
+                                "date": "07.05.2023",
+                                "time": "09:08",
+                                "title_size": "small",
+                                "info_size": "default",
+                                "description": ""
+                            })
+                        </div>
+                        <div class="content__row-small">
+                            @@include("../blocks/modules/info-links-no-title/info-links-no-title.html")
+                        </div>
                     </div>
                 </main>
                 <aside class="content__aside hide_on_tablet">
-                    @@include("../blocks/modules/info-links-without-image/info-links-without-image.html")
+                    @@include("../blocks/modules/info-links/info-links.html")
                     @@include("../blocks/modules/adv-banner/adv-banner.html", {
                         "image_link": "http://placehold.it/335x564"
                     })
-                </aside>                
+                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
+                        "image_link": "http://placehold.it/335x564"
+                    })
+                </aside>
             </div>
             <div class="content__wrap-in center">
                 @@include("../blocks/modules/adv-banner/adv-banner.html", {
