@@ -6,6 +6,7 @@ import SearchButtonAll from "%modules%/search/search";
 import PageTabs from "%modules%/page-tabs/page-tabs";
 import ArticleSlider from "%modules%/article-page/article-page";
 import MaterialChooser from "%modules%/material-chooser/material-chooser";
+import EmitentsTab from "%modules%/emitents-tabs/emitents-tabs";
 
 
 
@@ -34,3 +35,6 @@ window.app.articleslider.init();
 
 window.app.materialChooser = new MaterialChooser();
 window.app.materialChooser.init();
+
+window.app.emitentsTabs = new EmitentsTab();
+window.app.emitentsTabs.init();
