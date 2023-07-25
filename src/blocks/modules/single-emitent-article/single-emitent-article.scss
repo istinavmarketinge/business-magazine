@@ -1,0 +1,28 @@
+.single-emitent-article {
+    &__title {
+        color: #180D2F;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 720;
+        line-height: 120%; /* 52.8px */
+        letter-spacing: 2.64px;
+        margin-bottom: 30px;
+    }
+    &__shields {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+        .hero-banner__info_item {
+            filter: none;
+        }
+        .hero-banner__info_item .text {
+            color: #180d2f;
+        }
+    }
+}

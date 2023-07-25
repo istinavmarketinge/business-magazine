@@ -1,0 +1,32 @@
+.single-stat {
+    padding: 30px;
+    margin-bottom: 60px;
+    border: 1px solid #C6C6C6;
+    &__titles {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    &__title {
+        padding: 7px 16px 8px 16px;
+        background: #ECEAF0;
+        color: #180D2F;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 180%; /* 21.6px */
+        letter-spacing: 0.48px;
+        cursor: pointer;
+    }
+    &__title--active {
+        background: #180D2F;
+        color: #fff;
+    }
+    &__image {
+        font-size: 0;
+        &:not(.single-stat__image--active) {
+            display: none;
+        }
+    }
+}

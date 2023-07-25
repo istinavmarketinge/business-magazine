@@ -1,0 +1,20 @@
+.single-emitent-about {
+    margin-bottom: 60px;
+    &__title {
+        color: #191919;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 720;
+        line-height: 140%; /* 44.8px */
+        letter-spacing: 1.92px;
+        margin-bottom: 20px;
+    }
+    &__text {
+        color: #191919;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 200%; /* 32px */
+        letter-spacing: 0.64px;
+    }
+}

@@ -3,10 +3,10 @@ import Header from "%modules%/header/header";
 import Courses from "%modules%/courses/courses";
 import Emitents from "%modules%/emitents/emitents";
 import SearchButtonAll from "%modules%/search/search";
-import PageTabs from "%modules%/page-tabs/page-tabs";
 import ArticleSlider from "%modules%/article-page/article-page";
 import MaterialChooser from "%modules%/material-chooser/material-chooser";
 import EmitentsTab from "%modules%/emitents-tabs/emitents-tabs";
+import StatTabs from "%modules%/emitents-single-stat-tabs/emitents-single-stat-tabs";
 
 
 
@@ -38,3 +38,6 @@ window.app.materialChooser.init();
 
 window.app.emitentsTabs = new EmitentsTab();
 window.app.emitentsTabs.init();
+
+window.app.statTabs = new StatTabs();
+window.app.statTabs.init();

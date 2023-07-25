@@ -1,0 +1,666 @@
+ <!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <header class="header">
+    <div class="header__in center">
+        <div class="header__left">
+            <a href="/index.html" class="header__logo">
+                <img src="img/logo.svg" width="100%" alt="">
+            </a>
+            <div class="header__region">
+                <div class="header__region-left">Регион:</div>
+                <div class="header__region-dropdown">
+                    <div class="active"><span>Центр</span></div>
+                    <div class="dropdown">
+                        <a href="#">Центр</a>
+                        <a href="#">Федеральный</a>
+                        <a href="#">Красноярск</a>
+                        <a href="#">Сибирь</a>
+                        <a href="#">Урал</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__burger_opener hide_on_desktop">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <nav class="header__middle hide_on_tablet">
+            <ul class="header__menu">
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Мероприятия</a></li>
+                <li><a href="#">Номер журнала</a></li>
+            </ul>
+        </nav>
+        <div class="header__right hide_on_tablet">
+            <form class="header__search">
+                <input type="text" placeholder="Поиск по сайту">
+                <button type="submit">
+                    <img src="img/search_white.svg" alt="">
+                </button>
+                <div class="header__search-line-active"></div>
+                <div class="header__search-line-to-active"></div>
+            </form>
+            <div class="header__socials">
+                <a href="#" class="header__social header__social--vk"><img src="img/vk.svg" alt=""></a>
+                <a href="#" class="header__social header__social--ok"><img src="img/ok.svg" alt=""></a>
+                <a href="#" class="header__social header__social--tg"><img src="img/tg.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="header__burger hide_on_desktop">
+        <div class="header__burger_in">
+            <form class="header__search">
+                <input type="text" placeholder="Поиск по сайту">
+                <button type="submit">
+                    <img src="img/search_white.svg" alt="">
+                </button>
+                <div class="header__search-line-active"></div>
+                <div class="header__search-line-to-active"></div>
+            </form>
+            <div class="header__burger_menus">
+                <nav class="header__burger_menu">
+                    <ul>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Мероприятия</a></li>
+                        <li><a href="#">Номер журнала</a></li>
+                    </ul>
+                </nav>
+                <nav class="header__burger_menu">
+                    <ul>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Авторские материалы</a></li>
+                        <li><a href="#">Финансовые показатели</a></li>
+                        <li><a href="#">Курсы</a></li>
+                        <li><a href="#">Эмитенты</a></li>
+                        <li><a href="#">Мнения экспертов</a></li>
+                        <li><a href="#">Последние заголовки</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contact">
+                <div class="icon">
+                    <img src="img/footer_phone.svg" width="100%" alt="">
+                </div>
+                <div class="title">Телефон редакции: </div>
+                <a href="tel:+7 495 727-01-67" class="value">+7 495 727-01-67</a>
+            </div>
+            <div class="footer__contact">
+                <div class="icon">
+                    <img src="img/footer_mail.svg" width="100%" alt="">
+                </div>
+                <div class="title">Электронные почты редакции: </div>
+            </div>
+            <div class="footer__list">
+                <div class="footer__list_item">
+                    <div class="title">Информационный отдел</div>
+                    <a href="#" class="value">info@business-magazine.online</a>
+                </div>
+                <div class="footer__list_item">
+                    <div class="title">Отдел рекламы</div>
+                    <a href="#" class="value">reklama@business-magazine.online</a>
+                </div>
+                <div class="footer__list_item">
+                    <div class="title">Отдел распространения/редакционная подписка</div>
+                    <a href="#" class="value">podpiska@business-magazine.online</a>
+                </div>
+                <div class="footer__list_item">
+                    <div class="title">Отдел по работе с партнерами</div>
+                    <a href="#" class="value">partner@business-magazine.online </a>
+                </div>
+            </div>
+            <div class="header__socials">
+                <a href="#" class="header__social header__social--vk"><img src="img/vk.svg" alt=""></a>
+                <a href="#" class="header__social header__social--ok"><img src="img/ok.svg" alt=""></a>
+                <a href="#" class="header__social header__social--tg"><img src="img/tg.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="adv-banner">
+    <div class="adv-banner__in center">
+        <img src="http://placehold.it/1520x260" alt="" width="100%">
+    </div>
+</div>
+        <div class="content__wrap">
+            <div class="content__wrap-in center">
+                <main class="content__main">
+                    <div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            
+                <a href="#" class="breadcrumbs__item-link">Главная / Эмитенты</a>
+            
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item-separator">
+                <span>/</span>
+        </li>
+        <li class="breadcrumbs__item">
+            
+                <a href="#" class="breadcrumbs__item-link breadcrumbs__item-link-active">Акции Manchester United</a>
+            
+        </li>
+    </ul>
+</div>
+                     <!-- <div class="page-tabs">
+   
+    <div class="page-tabs__in glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides page-tabs__list">
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+            <li class="glide__slide page-tabs__item">Авторские материалы</li>
+            
+          </ul>
+        </div>
+      </div>
+
+</div> -->
+
+
+<div class="page-tabs">
+  <div class="page-tabs__list">
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+    <div class="page-tabs__item">Авторские материалы</div>
+    
+  </div>
+</div>
+                     <div class="pages-list__top">
+                        <div class="pages-list__title">Акции Manchester United</div>
+                    </div>
+                    <div class="emitents-tabs">
+    <div class="emitents-tabs__titles">
+        <div class="emitents-tabs__title emitents-tabs__title--active" data-tab_id="1">Профиль</div>
+        <div class="emitents-tabs__title" data-tab_id="2">Показатели</div>
+        <div class="emitents-tabs__title" data-tab_id="3">Дивиденды</div>
+        <div class="emitents-tabs__title" data-tab_id="4">Прогнозы</div>
+        <div class="emitents-tabs__titles_line"></div>
+    </div>
+    <div class="emitents-tabs__blocks">
+        <div class="emitents-tabs__block emitents-tabs__block--active" data-block_id="1">
+            <div class="single__main-stat">
+                <div class="left">MANU</div>
+                <div class="middle">$23</div>
+                <div class="right">(+18,8%)</div>
+            </div>
+            <div class="single-stat">
+    <div class="single-stat__titles">
+        <div class="single-stat__title single-stat__title--active" data-stat_id="1">1 день</div>
+        <div class="single-stat__title" data-stat_id="2">1 неделя</div>
+        <div class="single-stat__title" data-stat_id="3">1 месяц</div>
+        <div class="single-stat__title" data-stat_id="4">3 месяца</div>
+        <div class="single-stat__title" data-stat_id="5">1 год</div>
+        <div class="single-stat__title" data-stat_id="6">Все время</div>
+    </div>
+    <div class="single-stat__images">
+        <div class="single-stat__image single-stat__image--active" data-img_id="1">
+            <img src="http://placehold.it/1065x500" width="100%" alt="">
+        </div>
+        <div class="single-stat__image" data-img_id="2">
+            <img src="http://placehold.it/1065x500" width="100%" alt="">
+        </div>
+        <div class="single-stat__image" data-img_id="3">
+            <img src="http://placehold.it/1065x500" width="100%" alt="">
+        </div>
+        <div class="single-stat__image" data-img_id="4">
+            <img src="http://placehold.it/1065x500" width="100%" alt="">
+        </div>
+        <div class="single-stat__image" data-img_id="5">
+            <img src="http://placehold.it/1065x500" width="100%" alt="">
+        </div>
+        <div class="single-stat__image" data-img_id="6">
+            <img src="http://placehold.it/1065x500" width="100%" alt="">
+        </div>
+    </div>
+</div>
+            <div class="single-emitent-about">
+    <div class="single-emitent-about__title">О компании</div>
+    <div class="single-emitent-about__text">Английский профессиональный футбольный клуб из Траффорда, Большой Манчестер. Был основан в 1878 году под названием «Ньютон Хит», в 1902 году изменил название на «Манчестер Юнайтед». Один из самых популярных футбольных клубов в мире. Один из основателей английской Премьер-лиги в 1992 году.и</div>
+</div>
+            <div class="security-papers">
+    <div class="security-papers__title">Ценные бумаги</div>
+    <div class="security-papers__items">
+        <a href="#" class="emitents__bottom_item">
+            <div class="left">
+                <div class="texts">
+                    <div class="comp">ORCL</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="percent">(+6,79%)</div>
+                <div class="price">$24,99</div>
+            </div>
+        </a>
+    </div>
+</div>
+            <div class="single-emitent-article">
+    <div class="single-emitent-article__title">Акции «Манчестер Юнайтед» упали на 13% после оценки клуба Financial Times</div>
+    <div class="single-emitent-article__shields">
+        <div class="left">
+            <div class="hero-banner__info_item hero-banner__info_item--default">
+                <div class="icon">
+                    <img src="img/date_red.svg" width="100%" alt="">
+                </div>
+                <div class="text">07.05.2023</div>
+            </div>
+            <div class="hero-banner__info_item hero-banner__info_item--default">
+                <div class="icon">
+                    <img src="img/time_red.svg" width="100%" alt="">
+                </div>
+                <div class="text">09:08</div>
+            </div>
+            <div class="hero-banner__info_item hero-banner__info_item--default">
+                <div class="icon">
+                    <img src="img/eye.svg" width="100%" alt="">
+                </div>
+                <div class="text">1,6 к</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="hero-banner__info_item hero-banner__info_item--default">
+                <div class="icon">
+                    <img src="img/share.svg" width="100%" alt="">
+                </div>
+                <div class="text">Поделиться</div>
+            </div>
+        </div>
+    </div>
+    <div class="single-emitent-article__image">
+        <img src="http://placehold.it/1125x648" width="100%" alt="">
+    </div>
+</div>
+        </div>
+        <div class="emitents-tabs__block" data-block_id="2">
+            2
+        </div>
+        <div class="emitents-tabs__block" data-block_id="3">
+            3
+        </div>
+        <div class="emitents-tabs__block" data-block_id="4">
+            4
+        </div>
+    </div>
+</div>
+                </main>
+                <aside class="content__aside hide_on_tablet">
+                    <div class="info-links">
+    <div class="info-links__in">
+        <div class="info-links__top">
+            <div class="info-links__title">Мнения экспертов</div>
+            <a href="#" class="all__link">
+                <div class="arrow">
+                    <img src="img/all_arrow.svg" width="100%" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="info-links__items">
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+</div>
+                    <div class="adv-banner">
+    <div class="adv-banner__in center">
+        <img src="http://placehold.it/335x564" alt="" width="100%">
+    </div>
+</div>
+                    <div class="info-links">
+    <div class="info-links__in">
+        <div class="info-links__top">
+            <div class="info-links__title">Мнения экспертов</div>
+            <a href="#" class="all__link">
+                <div class="arrow">
+                    <img src="img/all_arrow.svg" width="100%" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="info-links__items">
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="#" class="info-links__item">
+                    <div class="info-links__item_image">
+                        <img src="http://placehold.it/90x80" alt="">
+                    </div>
+                    <div class="info-links__item_texts">
+                        <div class="info-links__item_title">ВВП России в 2022 году снизился на 2,1%, меньше, чем за ковидный 2020 год </div>
+                        <div class="info-links__item_bottom">
+                            <div class="info-links__item_left">
+                                <div class="icon">
+                                    <img src="img/author.svg" width="100%" alt="">
+                                </div>
+                                <div class="text"><strong>Мнения:</strong> Антон Силуанов</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+</div>
+                </aside>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="footer__in center">
+        <div class="footer__column">
+            <div class="footer__copyright">
+                2022 © BUSINESS-MAGAZINE.ONLINE
+            </div>
+            <div class="footer__list">
+                <div class="footer__list_item">
+                    <div class="title">Сетевое издание</div>
+                    <div class="value">«ФЕДЕРАЛЬНЫЙ БИЗНЕС ЖУРНАЛ» </div>
+                </div>
+                <div class="footer__list_item">
+                    <div class="title">Учредитель</div>
+                    <div class="value">ООО «РЕГИОНАЛЬНЫЕ НОВОСТИ» </div>
+                </div>
+                <div class="footer__list_item">
+                    <div class="title">Главный редактор</div>
+                    <div class="value">Хайрутдинова Светлана Юрьевна </div>
+                </div>
+            </div>
+            <div class="footer__text_dark">
+                Регистрационный номер и дата принятия решения о регистрации: серия Эл № ФС77-73398 от 03 августа 2018 г. согласно выписке из реестра зарегистрированных средств массовой информации выдана Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций
+            </div>
+            <div class="footer__text_white">
+                При использовании любого материала с данного сайта гипер-ссылка на Сетевое издание «ФЕДЕРАЛЬНЫЙ БИЗНЕС ЖУРНАЛ» обязательна.
+            </div>
+        </div>
+        <div class="footer__column">
+            <nav class="footer__menu">
+                <ul>
+                    <li><a href="#">Проекты</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Номер журнала</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Авторские материалы</a></li>
+                    <li><a href="#">Финансовые показатели</a></li>
+                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#">Эмитенты</a></li>
+                    <li><a href="#">Мнения экспертов</a></li>
+                    <li><a href="#">Последние заголовки</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__column footer__column--between">
+            <div class="footer__column__top">
+                <div class="footer__column_title">Контакты</div>
+                <div class="footer__contact">
+                    <div class="icon">
+                        <img src="img/footer_phone.svg" width="100%" alt="">
+                    </div>
+                    <div class="title">Телефон редакции: </div>
+                    <a href="tel:+7 495 727-01-67" class="value">+7 495 727-01-67</a>
+                </div>
+                <div class="footer__contact">
+                    <div class="icon">
+                        <img src="img/footer_mail.svg" width="100%" alt="">
+                    </div>
+                    <div class="title">Электронные почты редакции: </div>
+                </div>
+                <div class="footer__list">
+                    <div class="footer__list_item">
+                        <div class="title">Информационный отдел</div>
+                        <a href="#" class="value">info@business-magazine.online</a>
+                    </div>
+                    <div class="footer__list_item">
+                        <div class="title">Отдел рекламы</div>
+                        <a href="#" class="value">reklama@business-magazine.online</a>
+                    </div>
+                    <div class="footer__list_item">
+                        <div class="title">Отдел распространения/редакционная подписка</div>
+                        <a href="#" class="value">podpiska@business-magazine.online</a>
+                    </div>
+                    <div class="footer__list_item">
+                        <div class="title">Отдел по работе с партнерами</div>
+                        <a href="#" class="value">partner@business-magazine.online </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom_left">
+                    <span>16+</span>
+                </div>
+                <div class="footer__bottom_right">
+                    Сайт может содержать контент, не предназначенный для лиц младше 16-ти лет. 
+                </div>
+            </div>
+        </div>
+        <div class="footer__column footer__column--between">
+            <div class="footer__column__top">
+                <div class="footer__column_title">Региональные редакции</div>
+                <div class="footer__list">
+                    <div class="footer__list_item">
+                        <div class="title">Центр</div>
+                        <a href="#" class="value">info@business-magazine.online</a>
+                    </div>
+                    <div class="footer__list_item">
+                        <div class="title">Урал</div>
+                        <a href="#" class="value">reklama@business-magazine.online</a>
+                    </div>
+                    <div class="footer__list_item">
+                        <div class="title">Сибирь</div>
+                        <a href="#" class="value">podpiska@business-magazine.online</a>
+                    </div>
+                    <div class="footer__list_item">
+                        <div class="title">Красноярск</div>
+                        <a href="#" class="value">partner@business-magazine.online</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__column_bottom">
+                <div class="footer__socials">
+                    <a href="#" class="footer__social footer__social--vk"><img src="img/vk.svg" alt=""></a>
+                    <a href="#" class="footer__social footer__social--ok"><img src="img/ok.svg" alt=""></a>
+                    <a href="#" class="footer__social footer__social--tg"><img src="img/tg.svg" alt=""></a>
+                </div>
+                <div class="footer__counters">
+                    <img src="img/counters.png" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

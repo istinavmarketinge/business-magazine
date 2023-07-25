@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/blocks/modules/article-page/article-page.js":
@@ -7,7 +8,6 @@
   \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -68,7 +68,6 @@ var ArticleSlider = /*#__PURE__*/function () {
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -129,13 +128,62 @@ var Courses = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/emitents-single-stat-tabs/emitents-single-stat-tabs.js":
+/*!***********************************************************************************!*\
+  !*** ./src/blocks/modules/emitents-single-stat-tabs/emitents-single-stat-tabs.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var StatTabs = /*#__PURE__*/function () {
+  function StatTabs() {
+    _classCallCheck(this, StatTabs);
+  }
+  _createClass(StatTabs, [{
+    key: "selectTab",
+    value: function selectTab() {
+      if (!document.querySelector('.single-stat__title')) return;
+      document.querySelectorAll('.single-stat__title').forEach(function (title) {
+        title.addEventListener('click', function (e) {
+          document.querySelector('.single-stat__title--active').classList.remove('single-stat__title--active');
+          e.target.classList.add('single-stat__title--active');
+          var tabId = e.target.dataset.stat_id;
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.single-stat__image--active').slideUp().removeClass('single-stat__image--active');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()("[data-img_id=\"".concat(e.target.dataset.stat_id, "\"]")).slideDown().addClass('single-stat__image--active');
+          console.log(tabId);
+        });
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.selectTab();
+    }
+  }]);
+  return StatTabs;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (StatTabs);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/emitents-tabs/emitents-tabs.js":
 /*!***********************************************************!*\
   !*** ./src/blocks/modules/emitents-tabs/emitents-tabs.js ***!
   \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -196,7 +244,6 @@ var EmitentsTab = /*#__PURE__*/function () {
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -251,7 +298,6 @@ var Emitents = /*#__PURE__*/function () {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -356,7 +402,6 @@ var Header = /*#__PURE__*/function () {
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -397,7 +442,6 @@ var MaterialChooser = /*#__PURE__*/function () {
   \*****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -446,59 +490,12 @@ var NewsList = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/page-tabs/page-tabs.js":
-/*!***************************************************!*\
-  !*** ./src/blocks/modules/page-tabs/page-tabs.js ***!
-  \***************************************************/
-/***/ (() => {
-
-// import Glide from '@glidejs/glide';
-
-// const PageTabs = class PageTabs {
-//     constructor() {
-//         this.slider = null;
-//     }
-//     initSlider() {
-//         if (!document.querySelector('.page-tabs__in.glide')) return;
-//         this.slider = new Glide('.page-tabs__in.glide', {
-//             perView: 4,
-//             gap: 16,
-//             bound: true,
-//             peek: {
-//                 before: 0,
-//                 after: 100
-//             },
-//             breakpoints: {
-//                 1280: {
-//                     perView: 3,
-//                     peek: {
-//                         before: 0,
-//                         after: 100
-//                     },
-//                 },
-//                 980: {
-//                     perView: 2,
-
-//                 }
-//             }
-//         }).mount();
-//     }
-//     init() {
-//         this.initSlider();
-//     }
-// }
-
-// export default PageTabs;
-
-/***/ }),
-
 /***/ "./src/blocks/modules/search/search.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/search/search.js ***!
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -553,18 +550,16 @@ var SearchButtonAll = /*#__PURE__*/function () {
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_news_list_slider_news_list_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/news-list-slider/news-list-slider */ "./src/blocks/modules/news-list-slider/news-list-slider.js");
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
 /* harmony import */ var _modules_courses_courses__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/courses/courses */ "./src/blocks/modules/courses/courses.js");
 /* harmony import */ var _modules_emitents_emitents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/emitents/emitents */ "./src/blocks/modules/emitents/emitents.js");
 /* harmony import */ var _modules_search_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/search/search */ "./src/blocks/modules/search/search.js");
-/* harmony import */ var _modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/page-tabs/page-tabs */ "./src/blocks/modules/page-tabs/page-tabs.js");
-/* harmony import */ var _modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_page_tabs_page_tabs__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/article-page/article-page */ "./src/blocks/modules/article-page/article-page.js");
-/* harmony import */ var _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/material-chooser/material-chooser */ "./src/blocks/modules/material-chooser/material-chooser.js");
-/* harmony import */ var _modules_emitents_tabs_emitents_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/emitents-tabs/emitents-tabs */ "./src/blocks/modules/emitents-tabs/emitents-tabs.js");
+/* harmony import */ var _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/article-page/article-page */ "./src/blocks/modules/article-page/article-page.js");
+/* harmony import */ var _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/material-chooser/material-chooser */ "./src/blocks/modules/material-chooser/material-chooser.js");
+/* harmony import */ var _modules_emitents_tabs_emitents_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/emitents-tabs/emitents-tabs */ "./src/blocks/modules/emitents-tabs/emitents-tabs.js");
+/* harmony import */ var _modules_emitents_single_stat_tabs_emitents_single_stat_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/emitents-single-stat-tabs/emitents-single-stat-tabs */ "./src/blocks/modules/emitents-single-stat-tabs/emitents-single-stat-tabs.js");
 
 
 
@@ -589,12 +584,14 @@ window.app.searchbuttonall.init();
 // window.app.pagetabs = new PageTabs();
 // window.app.pagetabs.init();
 
-window.app.articleslider = new _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_6__["default"]();
+window.app.articleslider = new _modules_article_page_article_page__WEBPACK_IMPORTED_MODULE_5__["default"]();
 window.app.articleslider.init();
-window.app.materialChooser = new _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_7__["default"]();
+window.app.materialChooser = new _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_6__["default"]();
 window.app.materialChooser.init();
-window.app.emitentsTabs = new _modules_emitents_tabs_emitents_tabs__WEBPACK_IMPORTED_MODULE_8__["default"]();
+window.app.emitentsTabs = new _modules_emitents_tabs_emitents_tabs__WEBPACK_IMPORTED_MODULE_7__["default"]();
 window.app.emitentsTabs.init();
+window.app.statTabs = new _modules_emitents_single_stat_tabs_emitents_single_stat_tabs__WEBPACK_IMPORTED_MODULE_8__["default"]();
+window.app.statTabs.init();
 
 /***/ })
 

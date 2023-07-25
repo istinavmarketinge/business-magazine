@@ -1,0 +1,20 @@
+.security-papers {
+    margin-bottom: 60px;
+    &__title {
+        margin-bottom: 20px;
+        color: #191919;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 720;
+        line-height: 140%; /* 44.8px */
+        letter-spacing: 1.92px;
+    }
+    &__items {
+        border-top: 1px solid #C3BECD;
+       .emitents__bottom_item .right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+       } 
+    }
+}
