@@ -123,16 +123,26 @@ body {
     &__in {
         padding-bottom: 40px;
         border-bottom: 1px solid #180D2F;
+        @media all and (max-width: 1280px) {
+            padding-bottom: 0;
+        }
         &:not(:last-child) {
             margin-bottom: 40px;
+            @media all and (max-width: 1280px) {
+                margin-bottom: 20px;
+            }
         }
     }
     &__image {
         font-size: 0;
         margin-bottom: 60px;
+        @media all and (max-width: 1280px) {
+            margin-bottom: 40px;
+        }
     }
     &__title {
         margin-bottom: 20px;
+        
     }
     &__text {
         color: #191919;
@@ -142,6 +152,10 @@ body {
         line-height: 200%; /* 32px */
         letter-spacing: 0.64px;
         margin-bottom: 60px;
+        @media all and (max-width: 1280px) {
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
         &--edge {
             margin-bottom: 0;
         }
@@ -163,6 +177,9 @@ body {
         line-height: 200%; /* 32px */
         letter-spacing: 0.64px;
         padding-bottom: 20px;
+        @media all and (max-width: 1280px) {
+            font-size: 12px;
+        }
     }
 }
 @media all and (min-width: 1281px) {
@@ -173,5 +190,13 @@ body {
     .content__aside .info-links {
         padding-top: 40px;
         padding-bottom: 40px;
+
+    }
+}
+
+@media all and (max-width: 1280px) {
+    .content__aside .info-links {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }

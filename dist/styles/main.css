@@ -1497,6 +1497,10 @@ body {
   filter: contrast(1);
 }
 
+.courses--noMargin .courses {
+  margin-bottom: 0;
+}
+
 .emitents__items {
   overflow: hidden;
 }
@@ -2278,6 +2282,7 @@ body {
   border-bottom: 1px solid #C3BECD;
   position: relative;
   margin-bottom: 33px;
+  overflow: auto;
 }
 
 .emitents-tabs__title {
@@ -2624,6 +2629,32 @@ body {
     display: none !important;
   }
 
+  .single-course__in {
+    padding-bottom: 0;
+  }
+
+  .single-course__in:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .single-course__image {
+    margin-bottom: 40px;
+  }
+
+  .single-course__text {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .single-course__subtitle {
+    font-size: 12px;
+  }
+
+  .content__aside .info-links {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .header__logo {
     width: 26px;
     height: 38px;
@@ -2813,9 +2844,79 @@ body {
     letter-spacing: 0.6px;
   }
 
+  .footer__counters {
+    width: 87px;
+  }
+
   .footer__socials {
     margin-left: 0;
     margin-top: 40px;
+  }
+
+  .emitents-tabs__title {
+    font-size: 12px;
+    padding: 10px;
+    min-width: auto;
+  }
+
+  .emitents-tabs__block_tags {
+    gap: 6px;
+    white-space: nowrap;
+    overflow: auto;
+  }
+
+  .emitents-tabs__block_tag {
+    padding: 9px;
+  }
+
+  .single__main-stat {
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  .single-stat {
+    margin-bottom: 40px;
+    padding: 12px 9px;
+  }
+
+  .single-stat__titles {
+    gap: 6px;
+    margin-bottom: 13px;
+    overflow: auto;
+  }
+
+  .single-stat__title {
+    padding: 8px 12px;
+    font-size: 9px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .single-emitent-about {
+    margin-bottom: 40px;
+  }
+
+  .single-emitent-about__title {
+    margin-bottom: 18px;
+    font-size: 17px;
+  }
+
+  .single-emitent-about__text {
+    font-size: 12px;
+  }
+
+  .single-emitent-article__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .security-papers {
+    margin-bottom: 40px;
+  }
+
+  .security-papers__title {
+    margin-bottom: 18px;
+    font-size: 17px;
   }
 }
 
@@ -2828,7 +2929,6 @@ body {
     font-size: 17px;
     line-height: 140%;
     letter-spacing: 1.02px;
-    margin-bottom: 20px;
   }
 
   .search__answer {

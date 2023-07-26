@@ -5,6 +5,7 @@
         border-bottom: 1px solid #C3BECD;
         position: relative;
         margin-bottom: 33px;
+        overflow: auto;
     }
     &__title {
         min-width: 139px;
@@ -19,6 +20,12 @@
         cursor: pointer;
         transition: all .3s ease;
         user-select: none;
+        @media all and (max-width: 1280px) {
+            font-size: 12px;
+            padding: 10px;
+            min-width: auto;
+        }
+        
     }
     &__title--active {
         color: #180D2F;
@@ -44,6 +51,11 @@
         list-style: none;
         margin-bottom: 37px;
         gap: 40px;
+        @media all and (max-width: 1280px) {
+            gap: 6px;
+            white-space: nowrap;
+            overflow: auto;
+        }
     }
     &__block_tag {
         padding: 7px 16px;
@@ -53,6 +65,9 @@
         font-style: normal;
         font-weight: 200;
         line-height: 180%;
+        @media all and (max-width: 1280px) {
+            padding: 9px;
+        }
     }
     &__block_tag--active {
         background: #180D2F;
@@ -73,6 +88,10 @@
         letter-spacing: 1.92px;
         display: flex;
         align-items: center;
+        @media all and (max-width: 1280px) {
+            font-size: 17px;
+            margin-bottom: 5px;
+        }
         .middle {
            color: #180D2F;
            margin-left: 20px;

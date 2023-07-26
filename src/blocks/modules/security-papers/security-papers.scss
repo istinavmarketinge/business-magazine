@@ -1,5 +1,8 @@
 .security-papers {
     margin-bottom: 60px;
+    @media all and (max-width: 1280px) {
+        margin-bottom: 40px;
+    }
     &__title {
         margin-bottom: 20px;
         color: #191919;
@@ -8,6 +11,10 @@
         font-weight: 720;
         line-height: 140%; /* 44.8px */
         letter-spacing: 1.92px;
+        @media all and (max-width: 1280px) {
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
     }
     &__items {
         border-top: 1px solid #C3BECD;
