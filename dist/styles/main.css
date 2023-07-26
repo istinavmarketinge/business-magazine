@@ -1926,7 +1926,7 @@ body {
   content: "";
   width: 5px;
   height: 8px;
-  background: url("/img/arrow-button-all.svg") 0 0/contain no-repeat;
+  background: url("../img/arrow-button-all.svg") 0 0/contain no-repeat;
   position: absolute;
   top: 41%;
   right: 0;
@@ -2037,8 +2037,14 @@ body {
   margin: 60px 0;
 }
 
-.article-page__text__bold span {
+.article-page__text__bold span,
+.article-page__text__bold a {
   color: #FF002E;
+  text-decoration: none;
+}
+
+.article-page__text__bold a:hover {
+  text-decoration: underline;
 }
 
 .article-page__text__light {
@@ -2065,6 +2071,10 @@ body {
   font-weight: 200;
   line-height: 200%;
   letter-spacing: 0.64px;
+}
+
+.article-page__text__light ul {
+  padding-left: 20px;
 }
 
 .article-page__text__light.min-margin {
@@ -2559,6 +2569,15 @@ body {
 @media all and (min-width: 1281px) {
   .hide_on_desktop {
     display: none !important;
+  }
+
+  .content__aside .adv-banner {
+    padding-bottom: 0;
+  }
+
+  .content__aside .info-links {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .header__search {
