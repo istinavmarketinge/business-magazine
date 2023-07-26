@@ -1,5 +1,8 @@
 .courses {
     margin-bottom: 80px;
+    &--inner_page {
+        width: 100%;
+    }
     &__items {
         overflow: hidden;
     }
@@ -67,6 +70,16 @@
         border: 1px solid #FFF;
         margin-top: 36px;
         transition: all .3s ease;
+        cursor: pointer;
+        &--single {
+            margin-top: 0;
+            margin-bottom: 36px;
+            display: inline-flex;
+        }
+        &--grey {
+            border-color: #787088;
+            
+        }
         
     }
     &__item_link:hover &__button {
@@ -83,6 +96,9 @@
         text-align: center;
         flex: 1 1 auto;
     }
+    &__button--grey &__button-left {
+        color: #787088;
+    }
     &__button-right {
         width: 50px;
         display: flex;
@@ -92,6 +108,26 @@
         .icon {
             width: 5px;
             font-size: 0;
+        }
+    }
+    &__button--grey &__button-right {
+        color: #787088;
+        border-color: #787088;
+        .icon {
+            filter: contrast(0);
+        }
+    }
+    &__button--single:hover {
+        background: #FF002E;
+        border-color: #FFF;
+    }
+    &__button--single:hover  &__button-left {
+        color: #FFF;
+    }
+    &__button--single:hover  &__button-right {
+        border-color: #FFF;
+        .icon {
+            filter: contrast(1);
         }
     }
 }

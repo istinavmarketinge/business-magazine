@@ -19,6 +19,9 @@ body {
 .content {
     &__wrap-in {
         display: flex;
+        @media all and (max-width: 1280px) {
+            display: block;
+        }
     }
     &__main {
         width: calc(100% - 335px - 60px);
@@ -32,6 +35,10 @@ body {
     &__aside {
         width: 335px;
         margin-left: 60px;
+        @media all and (max-width: 1280px) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }
 
@@ -108,5 +115,53 @@ body {
 .hide_on_desktop {
     @media all and (min-width: 1281px) {
         display: none !important;
+    }
+}
+
+
+.single-course {
+    &__in {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #180D2F;
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+    &__image {
+        font-size: 0;
+        margin-bottom: 60px;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__text {
+        color: #191919;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 200%; /* 32px */
+        letter-spacing: 0.64px;
+        margin-bottom: 60px;
+        &--edge {
+            margin-bottom: 0;
+        }
+        strong {
+            font-weight: 800;
+        }
+        ul {
+            padding-left: 20px;
+            li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    &__subtitle {
+        color: #191919;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 720;
+        line-height: 200%; /* 32px */
+        letter-spacing: 0.64px;
+        padding-bottom: 20px;
     }
 }
