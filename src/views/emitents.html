@@ -41,9 +41,16 @@
                      <div class="pages-list__top">
                         <div class="pages-list__title">Эмитенты</div>
                     </div>
-                    @@include("../blocks/modules/emitents-tabs/emitents-tabs.html")
+                    <div class="emitents-page__items">
+                        @@include("../blocks/modules/emitents-tabs/emitents-tabs.html")
+                    </div>
+                    <div class="search__button-all">
+                        <div class="search__button-all-in">
+                            Еще 20 материалов
+                        </div>
+                    </div>
                 </main>
-                <aside class="content__aside hide_on_tablet">
+                <aside class="content__aside">
                     @@include("../blocks/modules/info-links/info-links.html")
                     @@include("../blocks/modules/adv-banner/adv-banner.html", {
                         "image_link": "http://placehold.it/335x564"

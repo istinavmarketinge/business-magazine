@@ -21,19 +21,8 @@
             font-size: 11px;
             letter-spacing: 0.44px;
             padding: 8px;
+            padding: 12px 20px;
         }
-    }
-    &__item:first-child {
-        padding-right: 20px;
-    }
-    &__item:first-child:after {
-        content: "";
-        position: absolute;
-        top: 23%;
-        right: 10px;
-        width: 6px;
-        height: 22px;
-        background: url("/img/arrow-tabs.svg") 0 0/contain no-repeat;
     }
     &__list {
         margin: 0;
@@ -43,7 +32,7 @@
         position: relative;
         padding-bottom: 8px;
         &::-webkit-scrollbar {
-            height: 5px;
+            height: 3px;
             border-radius: 5px;
             width: 10px;
         }
@@ -53,7 +42,7 @@
         &::-webkit-scrollbar-thumb {
             background-color: #180D2F;
             width: 10px;
-            height: 5px;
+            height: 3px;
             border-radius: 5px;
         }
     }

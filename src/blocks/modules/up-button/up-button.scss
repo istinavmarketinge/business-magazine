@@ -1,0 +1,24 @@
+.up_button {
+    width: 42px;
+    height: 42px;
+    background: #FF002E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    right: 70px;
+    bottom: 480px;
+    transition: all .3s ease;
+    @media all and (max-width: 1280px) {
+        display: none;
+    }
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &__in {
+        width: 16px;
+        font-size: 0;
+    }
+}

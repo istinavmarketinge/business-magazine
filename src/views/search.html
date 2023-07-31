@@ -36,10 +36,14 @@
         <div class="content__wrap">
             <div class="content__wrap-in center">
                 <main class="content__main">
+                    <div class="hide_on_tablet">
                      @@include("../blocks/modules/breadcrumbs/breadcrumbs.html", {
                         "name": "Главная",
                         "subname": "Авторские материалы"
                      })
+                    </div>
+
+                     @@include("../blocks/modules/mobile-page-search/mobile-page-search.html")
                      @@include("../blocks/modules/search/search.html")
 
 
@@ -48,7 +52,7 @@
 
                     
                 </main>
-                <aside class="content__aside hide_on_tablet">
+                <aside class="content__aside">
                    @@include("../blocks/modules/info-links/info-links.html")
                    @@include("../blocks/modules/adv-banner/adv-banner.html", {
                        "image_link": "http://placehold.it/335x564"

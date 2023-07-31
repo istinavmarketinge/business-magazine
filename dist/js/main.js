@@ -545,6 +545,57 @@ var SearchButtonAll = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/up-button/up-button.js":
+/*!***************************************************!*\
+  !*** ./src/blocks/modules/up-button/up-button.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var UpButton = /*#__PURE__*/function () {
+  function UpButton() {
+    _classCallCheck(this, UpButton);
+  }
+  _createClass(UpButton, [{
+    key: "addClickListener",
+    value: function addClickListener() {
+      if (!document.querySelector('.up_button')) return;
+      document.querySelector('.up_button').addEventListener('click', function () {
+        document.querySelector("header").scrollIntoView();
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.addClickListener();
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        console.log(currentScrollPos);
+        if (currentScrollPos < 1000) {
+          document.querySelector('.up_button').classList.add('hidden');
+        } else {
+          document.querySelector('.up_button').classList.remove('hidden');
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    }
+  }]);
+  return UpButton;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UpButton);
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -561,6 +612,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_material_chooser_material_chooser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/material-chooser/material-chooser */ "./src/blocks/modules/material-chooser/material-chooser.js");
 /* harmony import */ var _modules_emitents_tabs_emitents_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/emitents-tabs/emitents-tabs */ "./src/blocks/modules/emitents-tabs/emitents-tabs.js");
 /* harmony import */ var _modules_emitents_single_stat_tabs_emitents_single_stat_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/emitents-single-stat-tabs/emitents-single-stat-tabs */ "./src/blocks/modules/emitents-single-stat-tabs/emitents-single-stat-tabs.js");
+/* harmony import */ var _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/up-button/up-button */ "./src/blocks/modules/up-button/up-button.js");
+
 
 
 
@@ -593,6 +646,8 @@ window.app.emitentsTabs = new _modules_emitents_tabs_emitents_tabs__WEBPACK_IMPO
 window.app.emitentsTabs.init();
 window.app.statTabs = new _modules_emitents_single_stat_tabs_emitents_single_stat_tabs__WEBPACK_IMPORTED_MODULE_8__["default"]();
 window.app.statTabs.init();
+window.app.upButton = new _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_9__["default"]();
+window.app.upButton.init();
 
 /***/ })
 

@@ -70,6 +70,9 @@
             margin-left: 0;
         }
     }
+    &__items--with_general &__item:first-child {
+        border-top: 1px solid #180D2F;
+    }
     @media all and (min-width: 961px) {
         &__items--with_general &__item:not(:first-child) &__item_texts {
             width: 100%;

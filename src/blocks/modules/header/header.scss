@@ -3,6 +3,10 @@
     padding-top: 16px;
     padding-bottom: 16px;
     position: relative;
+    @media all and (max-width: 1280px) {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
     &__in {
         display: flex;
         align-items: center;
@@ -141,7 +145,7 @@
         align-items: center;
         padding-bottom: 8px;
         position: relative;
-        padding-left: 38px;
+        // padding-left: 38px;
         transition: all .3s ease;
         background: #180D2F;
         box-sizing: border-box;

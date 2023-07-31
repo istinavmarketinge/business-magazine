@@ -7,6 +7,7 @@ import ArticleSlider from "%modules%/article-page/article-page";
 import MaterialChooser from "%modules%/material-chooser/material-chooser";
 import EmitentsTab from "%modules%/emitents-tabs/emitents-tabs";
 import StatTabs from "%modules%/emitents-single-stat-tabs/emitents-single-stat-tabs";
+import UpButton from "%modules%/up-button/up-button";
 
 
 
@@ -41,3 +42,6 @@ window.app.emitentsTabs.init();
 
 window.app.statTabs = new StatTabs();
 window.app.statTabs.init();
+
+window.app.upButton = new UpButton();
+window.app.upButton.init();

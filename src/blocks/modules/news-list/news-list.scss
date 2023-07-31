@@ -95,6 +95,7 @@
         margin-top: 30px;
         @media all and (max-width: 1280px) {
             flex-wrap: wrap;
+            margin-top: 0;
         }
     }
     &__info_item {
@@ -131,6 +132,11 @@
         display: flex;
         align-items: center;
         text-decoration: none;
+        opacity: 0.5;
+        transition: all .3s ease;
+        &:hover {
+            opacity: 1;
+        }
         .text {
             color: #180D2F;
             font-size: 12px;

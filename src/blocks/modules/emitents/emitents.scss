@@ -23,6 +23,11 @@
     &__item-top_right {
         width: 28px;
         font-size: 0;
+        opacity: 0.5;
+        transition: all .3s ease;
+        &:hover {
+            opacity: 1;
+        }
     }
     &__bottom_item {
         padding-top: 13px;
@@ -81,4 +86,27 @@
     &__bottom_item:hover .name {
         text-decoration: underline;
     }
+}
+.emitents-page__items {
+    margin-bottom: 40px;
+}
+@media all and (min-width: 1281px) {
+    .emitents-page__items {
+        margin-bottom: 30px;
+        .emitents__bottom_item .name {
+            font-size: 18px;
+        }
+        .emitents__bottom_item .percent {
+            font-size: 18px;
+        }
+        .emitents__bottom_item .icon {
+            width: 60px;
+            height: 60px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
 }
