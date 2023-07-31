@@ -2805,6 +2805,10 @@ html {
     padding-bottom: 20px;
   }
 
+  .content__row .news-list:last-child {
+    margin-bottom: 0 !important;
+  }
+
   .header {
     padding-top: 6px;
     padding-bottom: 6px;
@@ -3009,6 +3013,14 @@ html {
     margin-top: 40px;
   }
 
+  .breadcrumbs {
+    margin-bottom: 20px;
+  }
+
+  .page-tabs {
+    margin-bottom: 20px;
+  }
+
   .emitents-tabs__title {
     font-size: 12px;
     padding: 10px;
@@ -3113,6 +3125,7 @@ html {
     font-size: 17px;
     line-height: 140%;
     letter-spacing: 1.02px;
+    margin-bottom: 20px;
   }
 
   .search__answer {
@@ -3152,10 +3165,6 @@ html {
   .search__button-all-in {
     font-size: 12px;
     letter-spacing: 0.72px;
-  }
-
-  .page-tabs {
-    margin-bottom: 32px;
   }
 
   .page-tabs__item {

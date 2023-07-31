@@ -1,9 +1,8 @@
 .page-tabs {
     color: #180D2F;
     margin-bottom: 40px;
-    
-    @media all and (max-width:991px) {
-        margin-bottom: 32px;
+    @media all and (max-width: 1280px) {
+        margin-bottom: 20px;
     }
     &__item {
         padding: 10px;

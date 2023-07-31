@@ -213,4 +213,7 @@ html {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .content__row .news-list:last-child {
+        margin-bottom: 0 !important;
+    }
 }
