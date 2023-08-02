@@ -31,6 +31,10 @@
         padding-top: 20px;
         padding-bottom: 20px;
         border-top: 1px solid #180D2F;
+        @media all and (max-width: 840px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
         &:last-child {
             border-bottom: 1px solid #180D2F;
         }
@@ -65,6 +69,9 @@
     &__item_texts {
         width: calc(100% - 90px - 20px);
         margin-left: 20px;
+        @media all and (min-width: 961px) {
+            margin-left: 14px;
+        }
         &--full {
             width: 100%;
             margin-left: 0;
