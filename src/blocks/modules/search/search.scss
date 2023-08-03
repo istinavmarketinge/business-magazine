@@ -40,9 +40,11 @@
     &__list-item {
         padding: 21px 0;
         border-top: 1px solid #180D2F;
+        border-bottom: 1px solid #180D2F;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: -1px;
         @media all and (max-width:991px) {
             flex-direction: column;
             padding: 24px 0 20px 0;

@@ -541,7 +541,7 @@ html {
 }
 
 .single-course__in:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .single-course__image {
@@ -589,6 +589,10 @@ html {
   /* 32px */
   letter-spacing: 0.64px;
   padding-bottom: 20px;
+}
+
+.content__row .news-list--smallMargin:last-child {
+  margin-bottom: 0;
 }
 
 .header {
@@ -1900,9 +1904,11 @@ html {
 .search__list-item {
   padding: 21px 0;
   border-top: 1px solid #180D2F;
+  border-bottom: 1px solid #180D2F;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: -1px;
 }
 
 .search__list-item:last-child {
@@ -2295,7 +2301,6 @@ html {
   border-bottom: 1px solid #C3BECD;
   position: relative;
   margin-bottom: 33px;
-  overflow: auto;
 }
 
 .emitents-tabs__title {
@@ -2699,6 +2704,10 @@ html {
     display: none !important;
   }
 
+  .single-course .courses__button {
+    margin-bottom: 90px;
+  }
+
   .content__aside .adv-banner {
     padding-bottom: 0;
   }
@@ -2706,6 +2715,14 @@ html {
   .content__aside .info-links:last-child {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .hasMarginTop {
+    margin-top: 40px;
+  }
+
+  .content__main--courses .content__row {
+    margin-bottom: 0;
   }
 
   .header__search {
@@ -3087,7 +3104,6 @@ html {
   .single-stat__titles {
     gap: 6px;
     margin-bottom: 13px;
-    overflow: auto;
   }
 
   .single-stat__title {
