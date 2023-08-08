@@ -52,6 +52,11 @@
                     }
                 </div>
             </div>
+            <div class="glide__bullets hide_on_desktop" data-glide-el="controls[nav]">
+                @@for ($i = 0; $i < 10; $i++) {
+                    <div class="glide__bullet" data-glide-dir="=`+ $i +`">`+ $i +`</div>
+                }
+            </div>
             <div class="courses__button courses__button--grey hide_on_desktop">
                 <div class="courses__button-left">Узнать подробнее</div>
                 <div class="courses__button-right">

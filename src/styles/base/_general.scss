@@ -262,3 +262,23 @@ html {
         margin-bottom: 0;
     }
 }
+
+.glide__bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    .glide__bullet {
+        width: 6px;
+        height: 6px;
+        font-size: 0;
+        border-radius: 50%;
+        background: #C3BECD;
+        &--active {
+            background: #000;
+        }
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
+    }
+}
