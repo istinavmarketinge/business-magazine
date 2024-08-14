@@ -324,7 +324,6 @@ var Header = /*#__PURE__*/function () {
     value: function toggleRegion() {
       if (!document.querySelector('.header__region-dropdown .active')) return;
       document.querySelector('.header__region-dropdown .active').addEventListener('click', function (event) {
-        console.log(1231212123123123);
         event.target.closest('.header__region-dropdown').classList.toggle('isActive');
       });
     }
@@ -334,6 +333,22 @@ var Header = /*#__PURE__*/function () {
       document.addEventListener('click', function (event) {
         if (event.target.closest('.header__region-dropdown')) return;
         document.querySelector('.header__region-dropdown').classList.remove('isActive');
+      });
+    }
+  }, {
+    key: "toggleLang",
+    value: function toggleLang() {
+      if (!document.querySelector('.header__languages_opener')) return;
+      document.querySelector('.header__languages_opener').addEventListener('click', function (event) {
+        event.target.closest('.header__languages').classList.toggle('isActive');
+      });
+    }
+  }, {
+    key: "closeLang",
+    value: function closeLang() {
+      document.addEventListener('click', function (event) {
+        if (event.target.closest('.header__languages')) return;
+        document.querySelector('.header__languages').classList.remove('isActive');
       });
     }
   }, {
@@ -385,9 +400,11 @@ var Header = /*#__PURE__*/function () {
     value: function init() {
       this.toggleRegion();
       this.closeRegion();
+      this.closeLang();
       this.toggleBurger();
       this.toggleFocus();
       this.toggleBlur();
+      this.toggleLang();
       this.onWindowResize();
     }
   }]);

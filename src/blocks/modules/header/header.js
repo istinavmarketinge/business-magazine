@@ -11,7 +11,6 @@ const Header = class Header {
     toggleRegion() {
         if (!document.querySelector('.header__region-dropdown .active')) return;
         document.querySelector('.header__region-dropdown .active').addEventListener('click', (event) => {
-            console.log(1231212123123123);
             event.target.closest('.header__region-dropdown').classList.toggle('isActive');
         })
     }
@@ -19,6 +18,18 @@ const Header = class Header {
         document.addEventListener('click', (event) => {
             if (event.target.closest('.header__region-dropdown')) return;
             document.querySelector('.header__region-dropdown').classList.remove('isActive');
+        })
+    }
+    toggleLang() {
+        if (!document.querySelector('.header__languages_opener')) return;
+        document.querySelector('.header__languages_opener').addEventListener('click', (event) => {
+            event.target.closest('.header__languages').classList.toggle('isActive');
+        })
+    }
+    closeLang() {
+        document.addEventListener('click', (event) => {
+            if (event.target.closest('.header__languages')) return;
+            document.querySelector('.header__languages').classList.remove('isActive');
         })
     }
     toggleBurger() {
@@ -58,9 +69,11 @@ const Header = class Header {
     init() {
         this.toggleRegion();
         this.closeRegion();
+        this.closeLang();
         this.toggleBurger();
         this.toggleFocus();
         this.toggleBlur();
+        this.toggleLang();
         this.onWindowResize();
     }
 }
